@@ -32,3 +32,4 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 -Repela Lesia
 -Romaniuk Viacheslav
 -Makarenko Serhii
+-Kurdiukova Anastasiia
