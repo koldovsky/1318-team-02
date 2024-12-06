@@ -34,6 +34,7 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 -Makarenko Serhii
 -Kurdiukova Anastasiia
 -Semenenkov Oleksandr
--Ternal Rostyslav
+-Ternal Rostyslav 
+-Korzun Viktor
 
 - test1
