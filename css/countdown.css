@@ -1,0 +1,88 @@
+.countdown-section {
+  background-color: #000; /* Чорний фон */
+  color: #fff; /* Білий текст */
+  padding: 50px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Заголовок */
+.deal-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.red-dot {
+  color: red;
+}
+
+/* Підзаголовок */
+.deal-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.deal-price {
+  color: #ff0000; /* Червоний */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.deal-old-price {
+  text-decoration: line-through;
+  color: #888; /* Сірий для старої ціни */
+}
+
+/* Опис */
+.deal-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Лінк */
+.deal-link {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.deal-link:hover {
+  color: #ff0000;
+  border-bottom: 2px solid #ff0000;
+}
+
+/* Таймер */
+.countdown-timer {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.timer-item {
+  text-align: center;
+}
+
+.time {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff0000; /* Червоний колір цифр */
+}
+
+.label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+  
+  .image-section img {
+    width: 100%;
+    height: auto;
+  }
