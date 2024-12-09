@@ -1,0 +1,37 @@
+/* .footer {
+}
+.footer__container {
+}
+.footer__column {
+}
+.footer__logo {
+}
+.footer__logo-link {
+}
+.footer__text {
+}
+.footer__column-title {
+} */
+/* .footer__links {
+}
+.footer__link-item {
+} */
+.footer__link {
+    text-decoration: none;
+}
+.footer__link:hover{
+    color: red;
+    text-decoration: underline;
+}
+/* .footer__media {
+}
+.footer__media-item {
+}
+.footer__media-link {
+}
+.footer__bottom {
+}
+.footer__copyright {
+}
+.footer__reserved {
+} */
