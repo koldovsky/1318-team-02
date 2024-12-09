@@ -1,0 +1,33 @@
+.sales-offers-section {
+  margin: 50px 0;
+}
+.sales-offers-card__title {
+  font-size: 45px;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.sales-offers-card__title span {
+  color: var(--red-accent-color);
+}
+
+.sales-offers-card__link {
+  color: var(--title-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sales-offers-card__link:hover {
+  text-decoration: underline;
+}
+
+.sales-offers-card {
+  max-width: max-content;
+}
+
+.sales-offers-card {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 60px;
+}

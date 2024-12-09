@@ -1,0 +1,15 @@
+.red-button {
+    display: inline-block;
+    background-color: var(--red-accent-color);
+    color: var(--button-text-color);
+    padding: 15px 26px;
+    border: 2px solid var(--red-accent-color);
+    font-size: 15px;
+    text-align: center;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: var(--title-color);
+        border-color: var(--title-color);
+    }
+}

@@ -1,31 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --title-color: #222323;
-    --title-alternative-color: #ffffff;
-    --title-transparent-color: #22232375;
-    --title-alternative-transparent-color: #ffffff9e;
-    --text-color: #717474;
-    --red-accent-color: #f40106;
-    font-family: "PT Sans", sans-serif;
-    scroll-behavior: smooth;
+  --title-color: #222323;
+  --title-alternative-color: #ffffff;
+  --title-transparent-color: #22232375;
+  --title-alternative-transparent-color: #ffffff9e;
+  --text-color: #717474;
+  --button-text-color: #ffffff;
+  --red-accent-color: #f40106;
+  font-family: "PT Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
