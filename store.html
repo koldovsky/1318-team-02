@@ -13,8 +13,7 @@
 </head>
 
 <body>
-    <header>
-        <!-- Тут буде глобальний хедер -->
+    <header class="header" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header.partial.html">
     </header>
     <main class="store-content" data-hx-trigger="load" data-hx-swap="outerHTML"
         data-hx-get="store.content.partial.html"></main>
