@@ -1,12 +1,4 @@
 .newsletter {
-  font-family: PT sans, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
-}
-
-/* Newsletter */
-.newsletter {
   display: flex;
   align-items: center;
   padding: 20px;
