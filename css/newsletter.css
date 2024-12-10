@@ -1,73 +1,72 @@
-newsletter {
-    font-family: PT sans, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-  }
-  
-  /* Mail.form */
-  .mail.form {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-  }
-  
-  /* Image */
-  .mail.form__image {
-    flex: 1;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-  }
-  
-  /* Content */
-  .mail.form__content {
-    flex: 2;
-    padding: 14px;
-  }
-  
-  /* Title */
-  .mail.form__title {
-    font-size: 14px;
-    margin: 0 0 10px;
-    color: #333;
-  }
-  
-  .mail.form__title .discount {
-    font-size: 21px;
-    color: #f40106;
-  }
-  
-  /* Text styles */
-  .mail.form__text {
-    margin: 0 0 15px;
-    color: #555;
-  }
-  
-  /* Form */
-  .mail.form__input {
-    padding: 15px 26px;
-    margin: 12 0 0
-    width: 80%;
-    border: 1px solid #ccc;
-    background-color: lightgrey;
-    border-radius: 3px;
-  }
-  
-  /* Subscribe */
-  .mail.form__button {
-    padding: 15px 26px;
-    background-color: red;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    align-items: rigt;
-  }
-  
-  .mail.form__button:hover {
-    background-color: darkred;
-  }
-  
+.newsletter {
+  font-family: PT sans, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Image */
+.newsletter__image {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+/* Content */
+.newsletter__content {
+  flex: 2;
+  padding: 14px;
+}
+
+/* Title */
+.newsletter__title {
+  font-size: 14px;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.newsletter__title .discount {
+  font-size: 21px;
+  color: #f40106;
+}
+
+/* Text styles */
+.newsletter__text {
+  margin: 0 0 15px;
+  color: #555;
+}
+
+/* Form */
+.newsletter__input {
+  padding: 15px 26px;
+  margin: 12 0 0
+  width: 80%;
+  border: 1px solid #ccc;
+  background-color: lightgrey;
+  border-radius: 3px;
+}
+
+/* Subscribe */
+.newsletter__button {
+  padding: 15px 26px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  align-items: rigt;
+}
+
+.newsletter__button:hover {
+  background-color: darkred;
+}
