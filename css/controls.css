@@ -1,9 +1,9 @@
-.red-button {
+.accent-color-button {
     display: inline-block;
-    background-color: var(--red-accent-color);
+    background-color: var(--accent-color);
     color: var(--button-text-color);
     padding: 15px 26px;
-    border: 2px solid var(--red-accent-color);
+    border: 2px solid var(--accent-color);
     font-size: 15px;
     text-align: center;
     transition: 0.2s;

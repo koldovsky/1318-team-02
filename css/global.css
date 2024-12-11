@@ -15,7 +15,7 @@
   --title-alternative-transparent-color: #ffffff9e;
   --text-color: #717474;
   --button-text-color: #ffffff;
-  --red-accent-color: #f40106;
+  --accent-color: #f40106;
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }

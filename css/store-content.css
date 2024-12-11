@@ -68,7 +68,7 @@ desctop - min 1025px
                     margin-top: 16px;
                     font-size: 1.25rem;
                     font-weight: 700;
-                    color: var(--red-accent-color);
+                    color: var(--accent-color);
                 }
 
                 .store__item-button {
@@ -146,7 +146,7 @@ desctop - min 1025px
             }
 
             .store__pagination-page--current {
-                background: var(--red-accent-color);
+                background: var(--accent-color);
                 border-radius: 6px;
                 padding: 6px 10px;
                 color: var(--button-text-color);
