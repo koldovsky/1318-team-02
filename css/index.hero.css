@@ -1,0 +1,87 @@
+.hero-section {
+    background: url(../img/hero-cta/index.hero-section-bg.jpg);
+    background-position: center;
+    background-size: cover;
+
+    .hero-section__container {
+        padding: 110px 24px;
+
+        .hero-section__content-wrapper {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 20px;
+
+            .hero-section__slogan {
+                color: var(--title-transparent-color);
+                font-size: 1.375rem;
+            }
+
+            .hero-section__title {
+                color: var(--title-color);
+                font-size: 3.875rem;
+                font-weight: 400;
+                line-height: 1em;
+
+                .hero-section__accent-text,
+                .hero-section__accent-dot {
+                    color: var(--accent-color);
+                }
+            }
+
+            @media (min-width:768px) {
+                .hero-section__slogan {
+                    font-size: 1.4375rem;
+                }
+
+                .hero-section__title {
+                    font-size: 5.8125rem;
+                }
+
+            }
+
+            @media (min-width:1024px) {
+                .hero-section__slogan {
+                    font-size: 1.5rem;
+                }
+
+                .hero-section__title {
+                    font-size: 7.75rem;
+                }
+
+            }
+
+            .hero-section__button {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 1.03125rem;
+                font-weight: 700;
+                text-decoration: none;
+
+                .hero-section__icon {
+                    width: 24px;
+                }
+            }
+        }
+
+        @media (min-width:768px) {
+            .hero-section__content-wrapper {
+                width: 66.6%;
+            }
+        }
+    }
+
+    @media (min-width:426px) {
+        .hero-section__container {
+            padding: 160px 32px;
+        }
+    }
+
+    @media (min-width:769px) {
+        .hero-section__container {
+            padding: 210px 40px;
+        }
+    }
+}

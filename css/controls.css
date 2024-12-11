@@ -13,3 +13,20 @@
         border-color: var(--title-color);
     }
 }
+
+.light-color-button {
+    display: inline-block;
+    background-color: var(--title-alternative-color);
+    color: var(--title-color);
+    padding: 15px 26px;
+    border: 2px solid var(--title-alternative-color);
+    font-size: 15px;
+    text-align: center;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: var(--title-color);
+        border-color: var(--title-color);
+        color: var(--title-alternative-color);
+    }
+}
