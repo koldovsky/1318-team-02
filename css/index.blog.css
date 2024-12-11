@@ -1,0 +1,27 @@
+.blog__section {
+    padding: 50px 40px;
+    font-size: 16px;
+    text-align: center;
+
+
+}
+
+.blog__title {
+    text-transform: uppercase;
+
+    .blog__title-accent {
+        color: var(--red-accent-color);
+    }
+
+}
+
+.blog__description,
+.blog__placeholder {
+    color: var(--text-color);
+}
+
+.blog__placeholder {
+    border: 1px solid #cdcbcb;
+    padding: 200px 20px;
+    /* width: 800px; */
+}
