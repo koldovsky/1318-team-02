@@ -1,8 +1,31 @@
 .sales-offers-section {
   margin: 50px 0;
+  padding: 5px;
 }
+
+.sales-offers-card--one {
+  background-image: url(../img/sales-offers-section/sales-offers-section-arrivals-background.png);
+}
+
+.sales-offers-card--two {
+  background-image: url(../img/sales-offers-section/sales-offers-section-trainers-background.png);
+}
+
+.sales-offers-card--three {
+  background-image: url(../img/sales-offers-section/sales-offers-section-hot-sale-background.png);
+}
+
+.sales-offers-card--one,
+.sales-offers-card--two,
+.sales-offers-card--three {
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  min-width: 230px;
+}
+
 .sales-offers-card__title {
-  font-size: 45px;
+  font-size: 1.7rem;
   text-transform: uppercase;
   color: var(--title-color);
 }
@@ -15,19 +38,36 @@
   color: var(--title-color);
   text-decoration: none;
   font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.sales-offers-card__link:hover {
-  text-decoration: underline;
+.sales-offers-section__cards-navigation {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 800px) {
+  .sales-offers-section__cards-navigation {
+    grid-template-columns: 500px 230px 230px;
+    grid-template-rows: 370px;
+    .sales-offers-card__title {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 .sales-offers-card {
-  max-width: max-content;
-}
-
-.sales-offers-card {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  padding: 60px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
