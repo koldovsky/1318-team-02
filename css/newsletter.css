@@ -1,7 +1,7 @@
 .newsletter {
   display: flex;
   align-items: center;
-  background-image: url(../img/Newsletter/newsletter_bg.png);
+  background-image: url(../img/newsletter/newsletter_bg.png);
   background-size: cover;
   background-position: center;
   padding: 20px;
