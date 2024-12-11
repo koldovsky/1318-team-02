@@ -21,170 +21,121 @@
       famous brands.
     </p>
   </header>
-
+  <div class="main-collection__category-titles">
+    <button class="main-collection__category-title" onclick="setActive(this)">
+      <span class="main-collection__category-title-text">Women</span>
+    </button>
+    <button class="main-collection__category-title" onclick="setActive(this)">
+      <span class="main-collection__category-title-text">Shoes</span>
+    </button>
+    <button class="main-collection__category-title" onclick="setActive(this)">
+      <span class="main-collection__category-title-text">Men</span>
+    </button>
+  </div>
   <div class="main-collection__categories">
     <div class="main-collection__category">
-      <div class="main-collection__category-title">
-        <button class="main-collection__category-title-button">
-          <span class="main-collection__category-title-text">Women</span>
-        </button>
+      <div class="main-collection__product">
+        <img
+          class="main-collection__product-image"
+          src="img/section_collection/collection_women_puma.jpg"
+          width="370"
+          alt="Puma Sports Bra"
+        />
+        <p class="main-collection__product-name">Puma Sports Bra</p>
+        <p class="main-collection__product-price">$12.00</p>
+        <button class="main-collection__product-add-button">Add to cart</button>
       </div>
-      <div class="main-collection__products">
-        <div class="main-collection__product">
-          <button class="main-collection__product-image-button">
-            <img
-              class="main-collection__product-image"
-              src="img/section_collection/collection_women_puma.jpg"
-              width="370"
-              alt="Puma Sports Bra"
-            />
-          </button>
-          <p class="main-collection__product-name">Puma Sports Bra</p>
-          <p class="main-collection__product-price">$12.00</p>
-          <button class="main-collection__product-add-button">
-            Add to cart
-          </button>
-        </div>
-        <div class="main-collection__product">
-          <button class="main-collection__product-image-button">
-            <img
-              class="main-collection__product-image"
-              src="img/section_collection/collection_women_reebok.jpg"
-              width="370"
-              alt="Reebok Long Sleeve Top"
-            />
-          </button>
-          <p class="main-collection__product-name">Reebok Long Sleeve Top</p>
-          <p class="main-collection__product-price">$18.00</p>
-          <button class="main-collection__product-add-button">
-            Add to cart
-          </button>
-        </div>
-        <div class="main-collection__product">
-          <button class="main-collection__product-image-button">
-            <img
-              class="main-collection__product-image"
-              src="img/section_collection/collection_women_quicksilver.jpg"
-              width="370"
-              alt="Quicksilver Workout Top"
-            />
-          </button>
-          <p class="main-collection__product-name">Quicksilver Workout Top</p>
-          <p class="main-collection__product-price">$12.00</p>
-          <button class="main-collection__product-add-button">
-            Add to cart
-          </button>
-        </div>
+      <div class="main-collection__product">
+        <img
+          class="main-collection__product-image"
+          src="img/section_collection/collection_women_reebok.jpg"
+          width="370"
+          alt="Reebok Long Sleeve Top"
+        />
+        <p class="main-collection__product-name">Reebok Long Sleeve Top</p>
+        <p class="main-collection__product-price">$18.00</p>
+        <button class="main-collection__product-add-button">Add to cart</button>
+      </div>
+      <div class="main-collection__product">
+        <img
+          class="main-collection__product-image"
+          src="img/section_collection/collection_women_quicksilver.jpg"
+          width="370"
+          alt="Quicksilver Workout Top"
+        />
+        <p class="main-collection__product-name">Quicksilver Workout Top</p>
+        <p class="main-collection__product-price">$12.00</p>
+        <button class="main-collection__product-add-button">Add to cart</button>
       </div>
     </div>
-
     <div class="main-collection__category">
-      <div class="main-collection__category-title">
-        <button class="main-collection__category-title-button">
-          <span class="main-collection__category-title-text">Men</span>
-        </button>
+      <div class="main-collection__product">
+        <img
+          class="main-collection__product-image"
+          src="img/section_collection/collection_men_adidas.jpg"
+          width="370"
+          alt="Adidas Compression Tee"
+        />
+        <p class="main-collection__product-name">Adidas Compression Tee</p>
+        <p class="main-collection__product-price">$33.00</p>
+        <button class="main-collection__product-add-button">Add to cart</button>
       </div>
-      <div class="main-collection__products">
-        <div class="main-collection__product">
-          <button class="main-collection__product-image-button">
-            <img
-              class="main-collection__product-image"
-              src="img/section_collection/collection_men_adidas.jpg"
-              width="370"
-              alt="Adidas Compression Tee"
-            />
-          </button>
-          <p class="main-collection__product-name">Adidas Compression Tee</p>
-          <p class="main-collection__product-price">$33.00</p>
-          <button class="main-collection__product-add-button">
-            Add to cart
-          </button>
-        </div>
-        <div class="main-collection__product">
-          <button class="main-collection__product-image-button">
-            <img
-              class="main-collection__product-image"
-              src="img/section_collection/collection_men_reebok.jpg"
-              width="370"
-              alt="Reebok Fitness Jacket"
-            />
-          </button>
-          <p class="main-collection__product-name">Reebok Fitness Jacket</p>
-          <p class="main-collection__product-price">$52.00</p>
-          <button class="main-collection__product-add-button">
-            Add to cart
-          </button>
-        </div>
-        <div class="main-collection__product">
-          <button class="main-collection__product-image-button">
-            <img
-              class="main-collection__product-image"
-              src="img/section_collection/collection_men_quicksilver.jpg"
-              width="370"
-              alt="Quicksilver Tech T-Shirt"
-            />
-          </button>
-          <p class="main-collection__product-name">Quicksilver Tech T-Shirt</p>
-          <p class="main-collection__product-price">$21.00</p>
-          <button class="main-collection__product-add-button">
-            Add to cart
-          </button>
-        </div>
+      <div class="main-collection__product">
+        <img
+          class="main-collection__product-image"
+          src="img/section_collection/collection_men_reebok.jpg"
+          width="370"
+          alt="Reebok Fitness Jacket"
+        />
+        <p class="main-collection__product-name">Reebok Fitness Jacket</p>
+        <p class="main-collection__product-price">$52.00</p>
+        <button class="main-collection__product-add-button">Add to cart</button>
+      </div>
+      <div class="main-collection__product">
+        <img
+          class="main-collection__product-image"
+          src="img/section_collection/collection_men_quicksilver.jpg"
+          width="370"
+          alt="Quicksilver Tech T-Shirt"
+        />
+        <p class="main-collection__product-name">Quicksilver Tech T-Shirt</p>
+        <p class="main-collection__product-price">$21.00</p>
+        <button class="main-collection__product-add-button">Add to cart</button>
       </div>
     </div>
-
     <div class="main-collection__category">
-      <div class="main-collection__category-title">
-        <button class="main-collection__category-title-button">
-          <span class="main-collection__category-title-text">Shoes</span>
-        </button>
+      <div class="main-collection__product">
+        <img
+          class="main-collection__product-image"
+          src="img/section_collection/collection_shoes_nike.jpg"
+          width="370"
+          alt="Nike Amanda Running Shoes"
+        />
+        <p class="main-collection__product-name">Nike Amanda Running Shoes</p>
+        <p class="main-collection__product-price">$120.00</p>
+        <button class="main-collection__product-add-button">Add to cart</button>
       </div>
-      <div class="main-collection__products">
-        <div class="main-collection__product">
-          <button class="main-collection__product-image-button">
-            <img
-              class="main-collection__product-image"
-              src="img/section_collection/collection_shoes_nike.jpg"
-              width="370"
-              alt="Nike Amanda Running Shoes"
-            />
-          </button>
-          <p class="main-collection__product-name">Nike Amanda Running Shoes</p>
-          <p class="main-collection__product-price">$120.00</p>
-          <button class="main-collection__product-add-button">
-            Add to cart
-          </button>
-        </div>
-        <div class="main-collection__product">
-          <button class="main-collection__product-image-button">
-            <img
-              class="main-collection__product-image"
-              src="img/section_collection/collection_shoes_puma.jpg"
-              width="370"
-              alt="Puma Basket Shoes"
-            />
-          </button>
-          <p class="main-collection__product-name">Puma Basket Shoes</p>
-          <p class="main-collection__product-price">$140.00</p>
-          <button class="main-collection__product-add-button">
-            Add to cart
-          </button>
-        </div>
-        <div class="main-collection__product">
-          <button class="main-collection__product-image-button">
-            <img
-              class="main-collection__product-image"
-              src="img/section_collection/collection_shoes_adidas.jpg"
-              width="370"
-              alt="Adidas Campus"
-            />
-          </button>
-          <p class="main-collection__product-name">Adidas Campus</p>
-          <p class="main-collection__product-price">$130.00</p>
-          <button class="main-collection__product-add-button">
-            Add to cart
-          </button>
-        </div>
+      <div class="main-collection__product">
+        <img
+          class="main-collection__product-image"
+          src="img/section_collection/collection_shoes_puma.jpg"
+          width="370"
+          alt="Puma Basket Shoes"
+        />
+        <p class="main-collection__product-name">Puma Basket Shoes</p>
+        <p class="main-collection__product-price">$140.00</p>
+        <button class="main-collection__product-add-button">Add to cart</button>
+      </div>
+      <div class="main-collection__product">
+        <img
+          class="main-collection__product-image"
+          src="img/section_collection/collection_shoes_adidas.jpg"
+          width="370"
+          alt="Adidas Campus"
+        />
+        <p class="main-collection__product-name">Adidas Campus</p>
+        <p class="main-collection__product-price">$130.00</p>
+        <button class="main-collection__product-add-button">Add to cart</button>
       </div>
     </div>
   </div>
