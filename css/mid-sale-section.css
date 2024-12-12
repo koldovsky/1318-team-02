@@ -21,7 +21,7 @@ mid-sale-section p {
 }
 
 .mid-sale-section__header-title span {
-  color: var(--red-accent-color);
+  color: var(--accent-color);
 }
 
 .mid-sale-section__header-description {
@@ -43,21 +43,21 @@ mid-sale-section p {
 }
 
 .mid-sale-card button {
-  background-color: var(--title-color);
+  background-color: var( --title-color);
   color: var(--title-alternative-color);
   padding: 15px 25px;
   border: 0px;
   font-weight: bold;
   font-size: 15px;
   &:hover {
-    background-color: var(--red-accent-color);
+    background-color: var(--accent-color);
     cursor: pointer;
     transition: all 0.3s ease;
   }
 }
 
 .mid-sale-card__price {
-  color: var(--red-accent-color);
+  color: var(--accent-color);
   font-weight: bold;
 }
 
