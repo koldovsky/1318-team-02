@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   font-family: Bebas neue, cursive;
 }
@@ -29,9 +30,9 @@ body, html {
   right: 10%;
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  width: 370px;
-  border-radius: 8px;
+  padding: 50px;
+  width: relative;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
@@ -56,6 +57,7 @@ body, html {
   color: #717474;
   text-decoration: none;
 }
+
 .contact-box a:hover {
   text-decoration: underline;
 }
