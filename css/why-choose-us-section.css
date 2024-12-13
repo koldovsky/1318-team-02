@@ -9,7 +9,7 @@
   }
   
   .why-choose-us__title span {
-    color: var(--red-accent-color);
+    color: var(--accent-color);
   }
   
   .why-choose-us__description {
@@ -23,6 +23,8 @@
     gap: 15px;
     margin-top: 20px;
     padding: 40px;
+    max-width: 1200px;
+    margin:auto;
   }
   
   .why-choose-us__feature {
