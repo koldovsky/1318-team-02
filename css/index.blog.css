@@ -10,7 +10,7 @@
     font-size: 45px;
 
     .blog__title-accent {
-        color: var(--red-accent-color);
+        color: var(--accent-color);
     }
 
 }

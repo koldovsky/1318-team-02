@@ -1,7 +1,13 @@
 .new-arrivals {
     padding: 50px 40px;
     font-size: 18px;
+}
 
+@media (min-width: 900px) {
+    .new-arrivals {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .new-arrivals__header {
@@ -11,7 +17,7 @@
         font-size: 45px;
 
         .new-arrivals__dot {
-            color: var(--red-accent-color);
+            color: var(--accent-color);
         }
     }
 
@@ -28,7 +34,7 @@
     color: var(--title-color);
     padding: 12px 20px;
     display: block;
-    border: 2px solid black;
+    border: 2px solid var(--title-color);
     width: 125px;
     margin: 20px 20px;
 
@@ -45,7 +51,15 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 35px 0;
-    gap: 25px;
+    gap: 20px;
+    
+
+}
+
+    @media (min-width: 900px) {
+        .new-arrivals__products {
+            flex-wrap: nowrap;
+    }
 
     .new-arrivals__product-name {
         color: var(--text-color);
@@ -53,7 +67,7 @@
     }
 
     .new-arrivals__product-price {
-        color: var(--red-accent-color);
+        color: var(--accent-color);
         font-weight: bold;
         padding: 12px 0px;
     }
