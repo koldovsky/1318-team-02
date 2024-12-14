@@ -26,18 +26,18 @@
 .newsletter__title {
   font-size: 14px;
   margin: 0 0 10px;
-  color: #333;
+  color: var(--title-color);
 }
 
 .newsletter__title .discount {
   font-size: 21px;
-  color: #f40106;
+  color: var(--accent-color);
 }
 
 /* Text styles */
 .newsletter__text {
   margin: 0 0 15px;
-  color: #555;
+  color: var(--text-color);
 }
 
 /* Form */
@@ -58,13 +58,13 @@
 /* Subscribe Button */
 .newsletter__button {
   padding: 15px 26px;
-  background-color: red;
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
   border: none;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .newsletter__button:hover {
-  background-color: darkred;
+  background-color: var(--accent-color);
 }
