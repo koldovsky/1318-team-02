@@ -50,3 +50,64 @@
 .contact-box a:hover {
   text-decoration: underline;
 }
+/* Pin styling */
+.pin {
+  position: absolute;
+  bottom: 50px; /* Distance above the map marker */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff; /* White background */
+  color: #333; /* Text color */
+  padding: 15px 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Stronger shadow for elevation */
+  text-align: center;
+  min-width: 220px; /* Minimum width */
+  z-index: 10; /* Ensure it appears above the map */
+}
+
+/* Pin title */
+.pin h1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 5px 0; /* Adjust spacing */
+}
+
+/* Pin text */
+.pin p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #333; /* Darken color on hover */
+}
+
+/* Optional: Pointer for the pin */
+.pin::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
