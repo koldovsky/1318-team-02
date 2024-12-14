@@ -18,8 +18,8 @@
 
 /* Content */
 .newsletter__content {
-  flex: 2;
-  padding: 14px;
+  flex: 1;
+  padding: 20px;
 }
 
 /* Title */
@@ -47,7 +47,7 @@
 /* Form */
 .newsletter__input {
   padding: 15px 26px;
-  margin: 12px 0 0;
+  margin-bottom: 12px 0 0;
   width: 80%;
   border: 1px solid #ccc;
   background-color: lightgrey;
