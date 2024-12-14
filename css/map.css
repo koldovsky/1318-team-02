@@ -1,6 +1,6 @@
 .map-container {
   width: 100%;
-  height: 500px;
+  height: 760px;
   position: relative;
 }
 
@@ -13,13 +13,14 @@
 
 /* Contact information */
 .contact-box {
+  height: 333px;
   position: absolute;
   top: 50%;
   right: 10%;
   transform: translateY(-50%);
   background-color: var(--title-alternative-color);
-  padding: 50px;
-  width: relative;
+  padding: 60px;
+  width: 370px;
   border-radius: 12px;
   box-shadow:var(--title-transparent-color);
   text-align: center;

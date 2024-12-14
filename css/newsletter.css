@@ -24,12 +24,16 @@
 
 /* Title */
 .newsletter__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
   font-size: 14px;
   margin: 0 0 10px;
   color: var(--title-color);
 }
 
 .newsletter__title .discount {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
   font-size: 21px;
   color: var(--accent-color);
 }
