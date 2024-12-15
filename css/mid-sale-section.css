@@ -14,6 +14,10 @@ mid-sale-section p {
   color: var(--title-color);
 }
 
+.mid-sale-section__header-description br {
+  display: none;
+}
+
 @media (min-width: 600px) {
   .mid-sale-section__header-title {
     font-size: 3rem;
@@ -24,6 +28,9 @@ mid-sale-section p {
   color: var(--accent-color);
 }
 
+.mid-sale-section__header-description br {
+  display: block;
+}
 .mid-sale-section__header-description {
   text-transform: none;
 }
@@ -43,7 +50,7 @@ mid-sale-section p {
 }
 
 .mid-sale-card button {
-  background-color: var( --title-color);
+  background-color: var(--title-color);
   color: var(--title-alternative-color);
   padding: 15px 25px;
   border: 0px;
@@ -59,6 +66,11 @@ mid-sale-section p {
 .mid-sale-card__price {
   color: var(--accent-color);
   font-weight: bold;
+}
+
+.mid-sale-card__title a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 .mid-sale-card__title:hover {

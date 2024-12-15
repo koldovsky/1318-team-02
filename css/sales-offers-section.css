@@ -1,25 +1,27 @@
 .sales-offers-section {
-  margin: 50px 0;
-  padding: 5px;
+  margin: 60px 0;
+  padding: 50px 25px;
 }
 
 .sales-offers-card--one {
   background-image: url(../img/sales-offers-section/sales-offers-section-arrivals-background.png);
+  background-position: 30% 30%;
 }
 
 .sales-offers-card--two {
   background-image: url(../img/sales-offers-section/sales-offers-section-trainers-background.png);
+  background-position: center;
 }
 
 .sales-offers-card--three {
   background-image: url(../img/sales-offers-section/sales-offers-section-hot-sale-background.png);
+  background-position: center;
 }
 
 .sales-offers-card--one,
 .sales-offers-card--two,
 .sales-offers-card--three {
   background-size: cover;
-  background-position: center;
   min-height: 300px;
   min-width: 230px;
 }
@@ -61,6 +63,9 @@
     .sales-offers-card__title {
       font-size: 2.5rem;
     }
+  }
+  .sales-offers-card--one {
+    background-position: center;
   }
 }
 
