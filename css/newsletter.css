@@ -20,6 +20,7 @@
 .newsletter__content {
   flex: 1;
   padding: 20px;
+  text-align: left;
 }
 
 /* Title */
@@ -40,10 +41,15 @@
 
 /* Text styles */
 .newsletter__text {
-  margin: 0 0 15px;
+    margin: 0 0 15px;
   color: var(--text-color);
 }
 
+.newsletter__form {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
 /* Form */
 .newsletter__input {
   padding: 15px 26px;
@@ -51,7 +57,7 @@
   width: 80%;
   border: 1px solid #ccc;
   background-color: lightgrey;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .newsletter__input:focus {
@@ -61,6 +67,7 @@
 
 /* Subscribe Button */
 .newsletter__button {
+  width: 80%;
   padding: 15px 26px;
   background-color: var(--accent-color);
   color: var(--button-text-color);
