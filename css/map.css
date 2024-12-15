@@ -52,22 +52,23 @@
 }
 /* Pin styling */
 .pin {
-  position: absolute;
-  bottom: 50px; /* Distance above the map marker */
+  position: center;
+  bottom: 80px; /* Distance above the map marker */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fff; /* White background */
-  color: #333; /* Text color */
+  background-color: #fff; 
+  color: var(--title-color);
   padding: 15px 20px;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Stronger shadow for elevation */
+  border-radius: 8px; 
+  box-shadow: var(--title-color)
   text-align: center;
-  min-width: 220px; /* Minimum width */
-  z-index: 10; /* Ensure it appears above the map */
+  min-width: 220px; 
+  z-index: 10;
 }
 
 /* Pin title */
 .pin h1 {
+  text-align: left;
   font-size: 18px;
   font-weight: bold;
   color: #333;
@@ -76,6 +77,7 @@
 
 /* Pin text */
 .pin p {
+  text-align: left;
   font-size: 14px;
   color: #555;
   margin: 0;
