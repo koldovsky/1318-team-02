@@ -1,37 +1,130 @@
-/* .footer {
+.footer {
+    padding: 70px 24px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--title-color);
 }
-.footer__container {
-}
+
+/* .footer__container {} */
+
 .footer__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .footer__logo {
+    margin-bottom: 30px;
 }
-.footer__logo-link {
+
+/* .footer__logo-link {} */
+
+.footer__logo-link img {
+    margin: auto;
 }
+
 .footer__text {
+    color: var(--title-alternative-transparent-color);
+    text-align: center;
+    line-height: 1.7;
 }
+
 .footer__column-title {
-} */
-/* .footer__links {
+    color: var(--title-alternative-color);
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 50px 0 32px;
+    position: relative;
+    /* letter-spacing: -0.05em; */
+    font-weight: 600;
 }
-.footer__link-item {
+
+.footer__column-title::after {
+    position: absolute;
+    content: '';
+    top: 45px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 52px;
+    height: 2px;
+    background-color: red;
+
+}
+
+.footer__links {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/* .footer__link-item {
+
 } */
+
 .footer__link {
     text-decoration: none;
+    color: var(--title-alternative-color);
 }
-.footer__link:hover{
-    color: red;
+
+.footer__link:hover {
+    color: var(--accent-color);
     text-decoration: underline;
+    text-decoration-color: var(--title-alternative-color);
 }
-/* .footer__media {
+
+.footer__media {
+    margin: 30px 0 45px;
+    display: flex;
+    gap: 15px;
+    list-style: none;
 }
-.footer__media-item {
-}
+
+/* .footer__media-item {} */
+
 .footer__media-link {
+    color: red;
+    background-color: red;
+    border: 1px solid red;
 }
+
+.footer__media-link svg {
+    color: red;
+    background-color: red;
+    border: 1px solid red;
+
+}
+
+.footer__media-link svg path {
+    color: red;
+    background-color: red;
+    border: 1px solid red;
+}
+
+.footer__line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--title-alternative-transparent-color);
+
+}
+
 .footer__bottom {
+    font-size: 12px;
+    color: var(--title-alternative-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 15px;
 }
+
 .footer__copyright {
+    text-align: center;
 }
-.footer__reserved {
-} */
+
+/* .footer__reserved {} */
