@@ -6,13 +6,54 @@
     background-color: var(--title-color);
 }
 
-/* .footer__container {} */
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    max-width: 1200px;
+}
 
+@media (min-width: 768px){
+    .footer {
+        padding: 0 24px;
+    }
+    .footer__container{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        padding: 70px 0 45px 0;
+    }
+}
 .footer__column {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+@media (min-width: 768px){
+    .footer__column:nth-child(1){
+        flex: 4;
+    }
+    .footer__column:nth-child(2){
+        flex: 3;
+    }
+    .footer__column:nth-child(3){
+        flex: 2;
+    }
+    .footer__column:nth-child(4){
+        flex: 3;
+    }
+    /* .footer__column{
+        align-items: flex-start;
+    } */
+    .footer__column:first-child{
+        align-items: flex-start;
+    }
+    .footer__column:last-child{
+        align-items: flex-end;
+    }
+}
+
 
 .footer__logo {
     margin-bottom: 30px;
@@ -28,6 +69,11 @@
     color: var(--title-alternative-transparent-color);
     text-align: center;
     line-height: 1.7;
+}
+@media (min-width: 768px){
+    .footer__text{
+        text-align: start;
+    }
 }
 
 .footer__column-title {
@@ -50,6 +96,11 @@
     height: 2px;
     background-color: red;
 
+}
+@media (min-width: 768px){
+    .footer__column-title {
+        margin: 0 0 32px;
+    }
 }
 
 .footer__links {
@@ -84,18 +135,6 @@
     list-style: none;
 }
 
-/* .footer__media-item {} */
-
-/* .footer__media-link {
-}
-
-.footer__media-link svg {
-} */
-
-/* .footer__media-link svg path {
-    fill: red
-} */
-
 .footer__media-link path.outer_bDW {
     fill: transparent; /* Чорний фон іконки */
 }
@@ -126,7 +165,15 @@
     flex-direction: column;
     gap: 20px;
     text-transform: uppercase;
-    margin-top: 15px;
+    padding: 15px 0;
+}
+@media (min-width: 768px){
+    .footer__bottom{
+        flex-direction: row;
+        width: 100%;
+        max-width: 1200px;
+        justify-content: space-between;
+    }
 }
 
 .footer__copyright {
