@@ -52,34 +52,35 @@
     justify-content: space-around;
     padding: 35px 0;
     gap: 20px;
-    
 
 }
 
-    @media (min-width: 900px) {
-        .new-arrivals__products {
-            flex-wrap: nowrap;
-    }
-
-    .new-arrivals__product-name {
-        color: var(--text-color);
-        font-size: 16px;
-    }
-
-    .new-arrivals__product-price {
-        color: var(--accent-color);
-        font-weight: bold;
-        padding: 12px 0px;
-    }
-
-    .new-arrivals__add-to-cart {
-        background-color: var(--title-color);
-        color: var(--button-text-color);
-        font-weight: bold;
-        padding: 15px 25px;
-    }
+.new-arrivals__product-name {
+    color: var(--text-color);
+    font-size: 16px;
 }
+
+.new-arrivals__product-price {
+    color: var(--accent-color);
+    font-weight: bold;
+    padding: 12px 0px;
+}
+
+.new-arrivals__add-to-cart {
+    background-color: var(--title-color);
+    color: var(--button-text-color);
+    font-weight: bold;
+    padding: 15px 25px;
+}
+
 
 .new-arrivals__product-image {
     max-width: 260px;
+}
+
+@media (min-width: 900px) {
+    .new-arrivals__products {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
 }
