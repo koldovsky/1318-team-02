@@ -1,4 +1,5 @@
 @import "global.css";
+@import "header.css";
 @import "index.hero.css";
 @import "controls.css";
 @import "countdown.css";
@@ -12,4 +13,3 @@
 @import "index.new-arrivals.css";
 @import "index.blog.css";
 @import "footer.css";
-@import "header.css";
