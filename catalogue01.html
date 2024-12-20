@@ -3,19 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>Catalog Page</title>
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-    />
-
     <link rel="stylesheet" href="./css/catalogue01.css" />
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
   </head>
-
   <body>
     <header>
       <div class="contacts">
@@ -60,10 +52,7 @@
         </div>
       </nav>
     </header>
-    <footer
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="global.footer.partial.html"
-    ></footer>
+    <div class="homepage"> Storepage</div>
+    <footer data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></footer>
   </body>
 </html>
