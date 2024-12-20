@@ -16,11 +16,7 @@ const minOfArray = numbers => Math.min(...numbers);
 
 //https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
 
-const minIndexValue = (numbers, toReturn) => toReturn === "value"
-    ? Math.min(...numbers)
-    : toReturn === "index"
-        ? numbers.indexOf(Math.min(...numbers))
-        : "Invalid input";
+const minIndexValue = (numbers, toReturn) => toReturn === "value" ? Math.min(...numbers) : numbers.indexOf(Math.min(...numbers));
 
 
 //Додаткові задачки по JS
