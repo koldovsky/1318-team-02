@@ -1,11 +1,11 @@
 .trending-collection-section {
   padding: 0;
   position: relative;
-  background-image: url("../img/trending/trending.jpeg"); /* Шлях до вашого фонового зображення */
+  background-image: url("../img/trending/trending.jpeg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 700px; /* Мінімальна висота секції. Підберіть потрібне вам значення */
+  min-height: 700px; 
 }
 
 .trending-collection-section__container {
@@ -20,13 +20,13 @@
 .trending-collection-section__content-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Залишаємо вирівнювання по лівому краю */
+  align-items: flex-start;
   width: 50%;
   position: relative;
   padding-left: 5%;
   padding-top: 10%;
   padding-bottom: 20%;
-  justify-content: center; /* Вирівнювання вмісту по центру по вертикалі */
+  justify-content: center; 
 }
 
 .trending-collection-section__text-content {
@@ -43,9 +43,9 @@
   font-size: 36px;
   color: rgba(113, 116, 116, 0.5);
   margin-bottom: 20px;
-  position: relative; /* Змінено на relative */
-  top: auto; /* Видалено */
-  left: auto; /* Видалено */
+  position: relative; 
+  top: auto; 
+  left: auto; 
 }
 
 .trending-collection-section__title {
@@ -59,7 +59,7 @@
 }
 
 .red-dot {
-  color: #D82828; /* Червоний колір */
+  color: #D82828; 
 }
 
 .trending-collection-section__button {
