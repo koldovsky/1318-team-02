@@ -1,14 +1,15 @@
 //https://www.codewars.com/kata/geometry-basics-circle-circumference-in-2d/train/javascript
 const circleCircumference = circle => 2 * Math.PI * circle.radius;
 
-return +(2 * Math.PI * circle.radius).toFixed(6);
-  
-class Circle {
-  constructor(radius){
-  this.radius = radius;
-  }
-}
+function circleCircumference(circle) {
+  return +(2 * Math.PI * circle.radius).toFixed(6);
 
+  class Circle {
+    constructor(radius){
+   this.radius = radius;
+   }
+}
+}
 
 //https://www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
 function giveMeFive(obj) {
