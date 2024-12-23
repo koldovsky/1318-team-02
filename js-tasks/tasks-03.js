@@ -21,6 +21,7 @@ function giveMeFive(obj) {
 }
 
 //https://www.codewars.com/kata/understanding-closures-the-basics/train/javascript
+// const buildFun = number => [...Array(number)].map((_, i) => () => i);
 function buildFun(numbers) {
   const result = [];
   for (let number = 0; number < numbers; number++) {
