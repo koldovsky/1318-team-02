@@ -16,6 +16,7 @@
   --text-color: #717474;
   --button-text-color: #ffffff;
   --accent-color: #f40106;
+  --button-line-color: #e3e3e3;
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }
