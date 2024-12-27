@@ -16,6 +16,9 @@
   --text-color: #717474;
   --button-text-color: #ffffff;
   --accent-color: #f40106;
+  --border-cart-color: #22232348;
+  --background-form-color: #2223231f;
+  --form-background-color: #e4e4e4;
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }

@@ -1,86 +1,98 @@
 .new-arrivals {
-    padding: 50px 40px;
-    font-size: 18px;
+  padding: 50px 40px;
+  font-size: 18px;
 }
 
 @media (min-width: 900px) {
-    .new-arrivals {
-        display: flex;
-        align-items: center;
-    }
+  .new-arrivals {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .new-arrivals__header {
-    .new-arrivals__title {
-        color: var(--title-color);
-        text-transform: uppercase;
-        font-size: 45px;
+  .new-arrivals__title {
+    color: var(--title-color);
+    text-transform: uppercase;
+    font-size: 45px;
 
-        .new-arrivals__dot {
-            color: var(--accent-color);
-        }
+    .new-arrivals__dot {
+      color: var(--accent-color);
     }
+  }
 
-    .new-arrivals__description {
-        color: var(--text-color);
-
-    }
+  .new-arrivals__description {
+    color: var(--text-color);
+  }
 }
 
 .new-arrivals__link {
-    font-weight: bold;
-    font-size: 13px;
-    text-decoration: none;
-    color: var(--title-color);
-    padding: 12px 20px;
-    display: block;
-    border: 2px solid var(--title-color);
-    width: 125px;
-    margin: 20px 20px;
-
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--title-color);
+  padding: 12px 20px;
+  display: block;
+  border: 2px solid var(--title-color);
+  width: 125px;
+  margin: 20px 20px;
 }
 
 .new-arrivals__link:hover {
-    color: var(--button-text-color);
-    background-color: var(--title-color);
+  color: var(--button-text-color);
+  background-color: var(--title-color);
 }
 
 .new-arrivals__products {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 35px 0;
-    gap: 20px;
-
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 35px 0;
+  gap: 20px;
 }
 
 .new-arrivals__product-name {
-    color: var(--text-color);
-    font-size: 16px;
+  color: var(--text-color);
+  font-size: 16px;
 }
 
 .new-arrivals__product-price {
-    color: var(--accent-color);
-    font-weight: bold;
-    padding: 12px 0px;
+  color: var(--accent-color);
+  font-weight: bold;
+  padding: 12px 0px;
 }
 
 .new-arrivals__add-to-cart {
-    background-color: var(--title-color);
-    color: var(--button-text-color);
-    font-weight: bold;
-    padding: 15px 25px;
+  background-color: var(--title-color);
+  border: var(--title-color);
+  color: var(--button-text-color);
+  font-weight: bold;
+  padding: 15px 25px;
 }
 
+.new-arrivals__add-to-cart:hover {
+  background-color: var(--accent-color);
+  border: var(--accent-color);
+  cursor: pointer;
+}
 
 .new-arrivals__product-image {
-    max-width: 260px;
+  max-width: 260px;
 }
 
 @media (min-width: 900px) {
-    .new-arrivals__products {
-        flex-wrap: nowrap;
-        justify-content: space-around;
-    }
+  .new-arrivals__products {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+}
+
+.new-arrivals__product-name a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.new-arrivals__product-name a:hover {
+  text-decoration: underline;
 }
