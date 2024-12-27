@@ -1,15 +1,10 @@
-<section class="main-collection" id="main-collection-section">
+<section class="main-collection">
   <header class="main-collection__header">
     <h2 class="main-collection__title">
       MAIN COLLECTION<span class="main-collection__title-dot">.</span>
     </h2>
     <div class="main-collection__divider-container">
-      <svg
-        class="main-collection__divider"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 3000 32"
-        style="width: 9%"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" width="6%" height="32">
         <path
           d="M0 16 L3000 16"
           style="fill: none; stroke: #e0e0e0; stroke-width: 2px"
@@ -21,19 +16,20 @@
       famous brands.
     </p>
   </header>
-  <div class="main-collection__category-titles">
-    <button class="main-collection__category-title" onclick="setActive(this)">
+  <div class="main-collection__category-titles" id="category-titles">
+    <button class="main-collection__category-title" data-category="women">
       <span class="main-collection__category-title-text">Women</span>
     </button>
-    <button class="main-collection__category-title" onclick="setActive(this)">
-      <span class="main-collection__category-title-text">Shoes</span>
-    </button>
-    <button class="main-collection__category-title" onclick="setActive(this)">
+    <button class="main-collection__category-title" data-category="men">
       <span class="main-collection__category-title-text">Men</span>
     </button>
+    <button class="main-collection__category-title" data-category="shoes">
+      <span class="main-collection__category-title-text">Shoes</span>
+    </button>
   </div>
-  <div class="main-collection__categories">
-    <div class="main-collection__category">
+  <div class="tab__line"></div>
+  <div class="main-collection__categories" id="categories">
+    <div class="main-collection__category" data-category="women">
       <div class="main-collection__product">
         <img
           class="main-collection__product-image"
@@ -68,7 +64,7 @@
         <button class="main-collection__product-add-button">Add to cart</button>
       </div>
     </div>
-    <div class="main-collection__category">
+    <div class="main-collection__category" data-category="men">
       <div class="main-collection__product">
         <img
           class="main-collection__product-image"
@@ -103,7 +99,7 @@
         <button class="main-collection__product-add-button">Add to cart</button>
       </div>
     </div>
-    <div class="main-collection__category">
+    <div class="main-collection__category" data-category="shoes">
       <div class="main-collection__product">
         <img
           class="main-collection__product-image"
@@ -115,27 +111,35 @@
         <p class="main-collection__product-price">$120.00</p>
         <button class="main-collection__product-add-button">Add to cart</button>
       </div>
-      <div class="main-collection__product">
-        <img
-          class="main-collection__product-image"
-          src="img/section_collection/collection_shoes_puma.jpg"
-          width="370"
-          alt="Puma Basket Shoes"
-        />
-        <p class="main-collection__product-name">Puma Basket Shoes</p>
-        <p class="main-collection__product-price">$140.00</p>
-        <button class="main-collection__product-add-button">Add to cart</button>
-      </div>
-      <div class="main-collection__product">
-        <img
-          class="main-collection__product-image"
-          src="img/section_collection/collection_shoes_adidas.jpg"
-          width="370"
-          alt="Adidas Campus"
-        />
-        <p class="main-collection__product-name">Adidas Campus</p>
-        <p class="main-collection__product-price">$130.00</p>
-        <button class="main-collection__product-add-button">Add to cart</button>
+      <div class="main-collection__category" data-category="shoes">
+        <div class="main-collection__product">
+          <img
+            class="main-collection__product-image"
+            src="img/section_collection/collection_shoes_puma.jpg"
+            width="370"
+            alt="Puma Basket Shoes"
+          />
+          <p class="main-collection__product-name">Puma Basket Shoes</p>
+          <p class="main-collection__product-price">$140.00</p>
+          <button class="main-collection__product-add-button">
+            Add to cart
+          </button>
+        </div>
+        <div class="main-collection__category" data-category="shoes">
+          <div class="main-collection__product">
+            <img
+              class="main-collection__product-image"
+              src="img/section_collection/collection_shoes_adidas.jpg"
+              width="370"
+              alt="Adidas Campus"
+            />
+            <p class="main-collection__product-name">Adidas Campus</p>
+            <p class="main-collection__product-price">$130.00</p>
+            <button class="main-collection__product-add-button">
+              Add to cart
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

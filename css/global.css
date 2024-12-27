@@ -19,6 +19,7 @@
   --border-cart-color: #22232348;
   --background-form-color: #2223231f;
   --form-background-color: #e4e4e4;
+  --button-line-color: #e3e3e3;
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }
