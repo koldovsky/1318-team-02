@@ -4,7 +4,7 @@
   background-image: url(../img/newsletter/newsletter_bg.png);
   background-size: cover;
   background-position: center;
-  padding: 20px;
+  padding: 35px 0px 45px;
   border: 1px solid #ddd;
 }
 
@@ -41,7 +41,7 @@
 
 /* Text styles */
 .newsletter__text {
-    margin: 0 0 15px;
+  margin: 0 0 15px;
   color: var(--text-color);
 }
 
@@ -50,11 +50,12 @@
   justify-content: flex-start;
   flex-direction: column;
 }
-/* Form */
+
+/* Input Field */
 .newsletter__input {
   padding: 15px 26px;
-  margin-bottom: 12px 0 0;
-  width: 80%;
+  margin-bottom: 12px; 
+  width: 90%;
   border: 1px solid #ccc;
   background-color: lightgrey;
   border-radius: 5px;
@@ -67,12 +68,12 @@
 
 /* Subscribe Button */
 .newsletter__button {
-  width: 80%;
+  width: 90%;
   padding: 15px 26px;
   background-color: var(--accent-color);
   color: var(--button-text-color);
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
