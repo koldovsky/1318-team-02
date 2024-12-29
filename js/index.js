@@ -1,5 +1,6 @@
 function init() {
   import("./cart.js");
+  import("./cart-form-submition.js");
   import("./navs_and_tabs.js");
 }
 const totalPartials = document.querySelectorAll(

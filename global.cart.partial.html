@@ -1,4 +1,5 @@
 <aside class="cart">
+  <div class="cart-overlay"></div>
   <div class="cart-container">
     <svg
       class="cart-container__icon"
@@ -32,7 +33,9 @@
         </button>
       </header>
       <div class="shopping-cart__main-container">
-        <div class="shopping-cart__products"></div>
+        <div class="shopping-cart__products">
+          <div class="shopping-cart__empty-message"></div>
+        </div>
         <div class="shopping-cart__promocode-container">
           <div class="shopping-cart__summary">
             <button class="shopping-cart__promo-code">Promo code</button>
@@ -52,7 +55,11 @@
             $<span class="shopping-cart__total-value">0</span>
           </p>
         </div>
-        <form class="shopping-cart__form" action="#" method="post">
+        <form
+          class="shopping-cart__form"
+          action="https://formspree.io/f/xanyegdw"
+          method="POST"
+        >
           <fieldset class="shopping-cart__fieldset">
             <legend class="shopping-cart__form-title">
               <b>Place an order</b>
@@ -111,6 +118,7 @@
                 placeholder="Your comment"
               ></textarea>
             </div>
+            <div class="shopping-cart__form-status"></div>
             <button type="submit" class="shopping-cart__submit-button">
               Order
             </button>

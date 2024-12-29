@@ -17,9 +17,12 @@
   --button-text-color: #ffffff;
   --accent-color: #f40106;
   --border-cart-color: #22232348;
-  --background-form-color: #2223231f;
+  --background-form-color: #2223230f;
   --form-background-color: #e4e4e4;
   --button-line-color: #e3e3e3;
+  --form-submit-success-color: #104212;
+  --form-submit-warning-color: #583b0e;
+  --form-submit-error-color: #721d17;
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }
