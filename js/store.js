@@ -1,5 +1,6 @@
 function init() {
-    import("./store.items-filter.js");
+    import("./products-service.js");
+    import("./store-content.js");
 }
 
 const totalPartials = document.querySelectorAll(
