@@ -43,9 +43,9 @@
   background-color: var(--title-color);
 }
 
-.new-arrivals__products {
+
+.product-carousel__slides {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   padding: 35px 0;
