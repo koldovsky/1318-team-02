@@ -1,54 +1,54 @@
 .why-choose-us {
-    text-align: center;
-  }
-  
-  .why-choose-us__title {
-    font-size: 45px;
-    text-transform: uppercase;
-    color: var(--title-color);
-  }
-  
-  .why-choose-us__title span {
-    color: var(--accent-color);
-  }
-  
-  .why-choose-us__description {
-    font-size: 20px;
-    color: var(--title-transparent-color);
-  }
-  
-  .why-choose-us__all-feature {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-    padding: 40px;
-    max-width: 1200px;
-    margin:auto;
-  }
-  
-  .why-choose-us__feature {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 15px;
-    border: 1px solid var(--title-transparent-color);
-  }
-  
-  .why-choose-us__feature svg {
-    margin-bottom: 10px;
-    color: var(--title-transparent-color);
-  }
-  
-  .why-choose-us__feature-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px 0px;
-  }
-  
-  .why-choose-us__feature-description {
-    font-size: 16px;
-    color: var(--title-transparent-color);
-  }
-  
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.why-choose-us__title {
+  font-size: 45px;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+.why-choose-us__title span {
+  color: var(--accent-color);
+}
+
+.why-choose-us__description {
+  font-size: 20px;
+  color: var(--title-transparent-color);
+}
+
+.why-choose-us__all-feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.why-choose-us__feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 15px;
+  border: 1px solid var(--title-transparent-color);
+}
+
+.why-choose-us__feature svg {
+  margin-bottom: 10px;
+  color: var(--title-transparent-color);
+}
+
+.why-choose-us__feature-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.why-choose-us__feature-description {
+  font-size: 16px;
+  color: var(--title-transparent-color);
+}
