@@ -6,25 +6,21 @@
   </div>
   <div class="store__navigation container">
     <div class="store__pagination">
-      <a class="store__pagination-arrow store__pagination-arrow--prev store__pagination-arrow--disabled"
-        href="#">&lt;</a>
-      <div class="store__pagination-pages">
-        <button class="store__pagination-page store__pagination-page--current">1</button>
-        <button class="store__pagination-page">2</button>
-        <button class="store__pagination-page">3</button>
-        <button class="store__pagination-page">4</button>
-        <button class="store__pagination-page">5</button>
-      </div>
+      <a class="store__pagination-arrow store__pagination-arrow--prev" href="#">&lt;</a>
+      <div class="store__pagination-pages"></div>
       <a class="store__pagination-arrow store__pagination-arrow--next" href="#">&gt;</a>
     </div>
     <div class="store__item-filter">
       <label class="store__item-filter-label" for="products-per-page">Products per page:</label>
-      <select class="store__item-filter-select" id="products-per-page">
-        <option class="store__item-filter-option" value="8" selected>8</option>
-        <option class="store__item-filter-option" value="12">12</option>
-        <option class="store__item-filter-option" value="16">16</option>
-        <option class="store__item-filter-option" value="20">20</option>
-      </select>
+      <div class="store__item-filter-container">
+        <select class="store__item-filter-select" id="products-per-page">
+          <option class="store__item-filter-option" value="2">2</option>
+          <option class="store__item-filter-option" value="8" selected>8</option>
+          <option class="store__item-filter-option" value="12">12</option>
+          <option class="store__item-filter-option" value="16">16</option>
+          <option class="store__item-filter-option" value="20">20</option>
+        </select>
+      </div>
     </div>
   </div>
 </main>

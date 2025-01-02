@@ -1,75 +1,68 @@
-// async function fetchJSON() {
-//     try {
-//         const response = await fetch("./api/store-products-info.json");
-//         const data = await response.json();
-//         renderStoreContent(data);
-//     } catch (error) {
-//         console.error("Error fetching JSON:", error);
-//     }
-// }
-
-// const itemsFilter = document.querySelector("#products-per-page");
-// itemsFilter.addEventListener("change", fetchJSON);
-
-// const renderProductCard = (data) => {
-//     const cardHTML = `<article class="store__item">
-//           <img
-//             class="store__item-image"
-//             src="${data.imgSrc}"
-//             alt="${data.imgAlt}"
-//           />
-//           <h4 class="store__item-title">
-//             <a href="#" class="store__item-link">${data.productTitle}</a>
-//           </h4>
-//           <p class="store__item-price">$${data.productPrice},00</p>
-//           <button class="store__item-button accent-color-button">Buy</button>
-//       </article>`;
-//     return cardHTML;
-// };
-
-// const renderStoreContent = (data) => {
-//     const productsContainer = document.querySelector(".store__content-container");
-//     const productsAmount = itemsFilter.value;
-//     if (productsAmount <= data.length) {
-//         productsContainer.innerHTML = "";
-//         for (let i = 0; i < productsAmount; i++) {
-//             productsContainer.innerHTML += renderProductCard(data[i]);
-//         }
-//     } else {
-//         productsContainer.innerHTML = "";
-//         for (let i = 0; i < data.length; i++) {
-//             productsContainer.innerHTML += renderProductCard(data[i]);
-//         }
-//     }
-// };
-
-// fetchJSON();
-
 import { ProductsService } from './products-service.js';
 
 export class ProductList {
   constructor() {
     this.container = document.querySelector('.store__content-container');
+    this.productsFilter = document.querySelector("#products-per-page");
     this.prevPage = document.querySelector('.store__pagination-arrow--prev');
     this.nextPage = document.querySelector('.store__pagination-arrow--next');
     this.productsPagination = document.querySelector(".store__pagination-pages");
-    this.productsFilter = document.querySelector("#products-per-page");
+    this.currentPage = 1;
+    this.productsCache = null;
     this.productsService = new ProductsService();
     this.renderProducts();
+    this.addEventListeners();
   }
+
   async renderProducts() {
+    const productsToShow = Number(this.productsFilter.value);
+    const start = (this.currentPage - 1) * productsToShow;
+    const end = start + productsToShow;
+    if (!this.productsCache) {
+      this.productsCache = await this.productsService.getProducts();
+    }
+    const products = this.productsCache;
     let productListHtml = '';
-    const products = await this.productsService.getProducts();
-    const productsToShow = this.productsFilter.value;
-    products.slice(0, productsToShow).forEach(product => {
+    products.slice(start, end).forEach(product => {
       productListHtml += this.createProductHtml(product);
     });
-    // products.forEach(product => {
-    //     productListHtml += this.createProductHtml(product);
-    // });
     this.container.innerHTML = productListHtml;
-    this.addEventListenners();
+    this.renderPagination(products);
   }
+
+  renderPagination(productsArray) {
+    const totalPages = Math.ceil(productsArray.length / Number(this.productsFilter.value));
+    this.productsPagination.innerHTML = '';
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= this.currentPage - 1 && i <= this.currentPage + 1)) {
+        const pageButton = this.createPageButton(i);
+        this.productsPagination.appendChild(pageButton);
+      } else {
+        if (this.productsPagination.lastElementChild.textContent !== '...') {
+          const dots = document.createElement('span');
+          dots.innerHTML = '...';
+          dots.classList.add('store__pagination-page');
+          this.productsPagination.appendChild(dots);
+        }
+      }
+    }
+    this.prevPage.classList.toggle('store__pagination-arrow--disabled', this.currentPage === 1);
+    this.nextPage.classList.toggle('store__pagination-arrow--disabled', this.currentPage === totalPages);
+  }
+
+  createPageButton(pageNumber) {
+    const pageButton = document.createElement('a');
+    pageButton.innerHTML = pageNumber;
+    pageButton.href = '#';
+    pageButton.classList.add('store__pagination-page');
+    pageButton.classList.toggle('store__pagination-page--current', pageNumber === this.currentPage);
+    pageButton.addEventListener('click', () => {
+      this.currentPage = pageNumber;
+      this.renderProducts();
+    });
+    return pageButton;
+  }
+
   createProductHtml(product) {
     return `<article class="store__item">
           <img
@@ -84,8 +77,20 @@ export class ProductList {
           <button class="store__item-button accent-color-button" data-id="${product.id}">Buy</button>
       </article>`;
   }
-  addEventListenners() {
-    this.productsFilter.addEventListener('change', this.renderProducts.bind(this));
+
+  addEventListeners() {
+    this.productsFilter.addEventListener('change', () => {
+      this.currentPage = 1;
+      this.renderProducts();
+    });
+    this.prevPage.addEventListener('click', () => {
+      if (this.currentPage > 1) this.currentPage--;
+      this.renderProducts();
+    });
+    this.nextPage.addEventListener('click', () => {
+      if (this.currentPage < this.productsPagination.children.length) this.currentPage++;
+      this.renderProducts();
+    });
   }
 }
 

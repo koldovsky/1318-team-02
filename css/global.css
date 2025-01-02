@@ -23,6 +23,8 @@
   --form-submit-success-color: #104212;
   --form-submit-warning-color: #583b0e;
   --form-submit-error-color: #721d17;
+  --select-border-color: #c5cbd6;
+  --select-box-shadow-color: #2127361f;
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }
