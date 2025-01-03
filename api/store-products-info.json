@@ -1,132 +1,132 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "imgSrc": "img/store-img/adidas-black-trainers.jpg",
         "imgAlt": "Adidas Black Trainers",
         "productTitle": "Adidas Black Trainers",
         "productPrice": 60
     },
     {
-        "id": 1,
+        "id": 2,
         "imgSrc": "img/store-img/adidas-campus.jpg",
         "imgAlt": "Adidas Campus",
         "productTitle": "Adidas Campus",
         "productPrice": 130
     },
     {
-        "id": 2,
+        "id": 3,
         "imgSrc": "img/store-img/adidas-cloudfoam-trainers.jpg",
         "imgAlt": "Adidas Cloudfoam Trainers",
         "productTitle": "Adidas Cloudfoam Trainers",
         "productPrice": 60
     },
     {
-        "id": 3,
+        "id": 4,
         "imgSrc": "img/store-img/adidas-compression-tee.jpg",
         "imgAlt": "Adidas Compression Tee",
         "productTitle": "Adidas Compression Tee",
         "productPrice": 33
     },
     {
-        "id": 4,
+        "id": 5,
         "imgSrc": "img/store-img/asics-jordan-2000.jpg",
         "imgAlt": "Asics Jordan 2000",
         "productTitle": "Asics Jordan 2000",
         "productPrice": 200
     },
     {
-        "id": 5,
+        "id": 6,
         "imgSrc": "img/store-img/nike-amanda-running-shoes.jpg",
         "imgAlt": "Nike Amanda Running Shoes",
         "productTitle": "Nike Amanda Running Shoes",
         "productPrice": 120
     },
     {
-        "id": 6,
+        "id": 7,
         "imgSrc": "img/store-img/nike-classic-polo-t-shirt.jpg",
         "imgAlt": "Nike Classic Polo T-Shirt",
         "productTitle": "Nike Classic Polo T-Shirt",
         "productPrice": 23
     },
     {
-        "id": 7,
+        "id": 8,
         "imgSrc": "img/store-img/nike-winter-jacket-in-blue.jpg",
         "imgAlt": "Nike Winter Jacket in Blue",
         "productTitle": "Nike Winter Jacket in Blue",
         "productPrice": 85
     },
     {
-        "id": 8,
+        "id": 9,
         "imgSrc": "img/store-img/puma-basket-shoes.jpg",
         "imgAlt": "Puma Basket Shoes",
         "productTitle": "Puma Basket Shoes",
         "productPrice": 140
     },
     {
-        "id": 9,
+        "id": 10,
         "imgSrc": "img/store-img/puma-essential-tank-top.jpg",
         "imgAlt": "Puma Essential Tank Top",
         "productTitle": "Puma Essential Tank Top",
         "productPrice": 43
     },
     {
-        "id": 10,
+        "id": 11,
         "imgSrc": "img/store-img/puma-fitness-shoes-in-grey.jpg",
         "imgAlt": "Puma Fitness Shoes in Grey",
         "productTitle": "Puma Fitness Shoes in Grey",
         "productPrice": 60
     },
     {
-        "id": 11,
+        "id": 12,
         "imgSrc": "img/store-img/puma-sports-bra.jpg",
         "imgAlt": "Puma Sports Bra",
         "productTitle": "Puma Sports Bra",
         "productPrice": 12
     },
     {
-        "id": 12,
+        "id": 13,
         "imgSrc": "img/store-img/puma-textile-running-shoes.jpg",
         "imgAlt": "Puma Textile Running Shoes",
         "productTitle": "Puma Textile Running Shoes",
         "productPrice": 62
     },
     {
-        "id": 13,
+        "id": 14,
         "imgSrc": "img/store-img/quicksilver-tech-t-shirt.jpg",
         "imgAlt": "Quicksilver Tech T-Shirt",
         "productTitle": "Quicksilver Tech T-Shirt",
         "productPrice": 21
     },
     {
-        "id": 14,
+        "id": 15,
         "imgSrc": "img/store-img/quicksilver-workout-top.jpg",
         "imgAlt": "Quicksilver Workout Top",
         "productTitle": "Quicksilver Workout Top",
         "productPrice": 12
     },
     {
-        "id": 15,
+        "id": 16,
         "imgSrc": "img/store-img/reebok-fitness-jacket.jpg",
         "imgAlt": "Reebok Fitness Jacket",
         "productTitle": "Reebok Fitness Jacket",
         "productPrice": 52
     },
     {
-        "id": 16,
+        "id": 17,
         "imgSrc": "img/store-img/reebok-long-sleeve-top.jpg",
         "imgAlt": "Reebok Long Sleeve Top",
         "productTitle": "Reebok Long Sleeve Top",
         "productPrice": 18
     },
     {
-        "id": 17,
+        "id": 18,
         "imgSrc": "img/store-img/reebok-red-duster.jpg",
         "imgAlt": "Reebok Red Duster",
         "productTitle": "Reebok Red Duster",
         "productPrice": 60
     },
     {
-        "id": 18,
+        "id": 19,
         "imgSrc": "img/store-img/reebok-workout-shorts.jpg",
         "imgAlt": "Reebok Workout Shorts",
         "productTitle": "Reebok Workout Shorts",

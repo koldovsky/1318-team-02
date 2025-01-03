@@ -1,79 +1,118 @@
 .trending-collection-section {
-  padding: 0;
-  position: relative;
-  background-image: url("../img/trending/trending.jpeg"); 
+  background: url(../img/trending/trending.jpeg);
+  background-position: 45% 50%;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 700px; 
-}
 
-.trending-collection-section__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
+  .trending-collection-section__container {
+    padding: 110px 24px;
 
-.trending-collection-section__content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 50%;
-  position: relative;
-  padding-left: 5%;
-  padding-top: 10%;
-  padding-bottom: 20%;
-  justify-content: center; 
-}
+    .trending-collection-section__content-wrapper {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      gap: 20px;
 
-.trending-collection-section__text-content {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: 70%;
-    text-align: left;
-    font-size: 18px;
-}
+      .trending-collection-section__slogan {
+        color: var(--title-transparent-color);
+        font-size: 1.375rem;
+      }
 
-.trending-collection-section__slogan {
-  font-size: 36px;
-  color: rgba(113, 116, 116, 0.5);
-  margin-bottom: 20px;
-  position: relative; 
-  top: auto; 
-  left: auto; 
-}
+      .trending-collection-section__title-conatiner {
+        display: flex;
+        flex-direction: column;
 
-.trending-collection-section__title {
-  font-size: 5vw;
-  max-font-size: 65px;
-  color: var(--title-color);
-  text-transform: uppercase;
-  white-space: pre-line;
-  line-height: 1.2;
-  margin: 0;
-}
+        .trending-collection-section__title {
+          color: var(--title-color);
+          font-size: 3.875rem;
+          font-weight: 400;
+          line-height: 1em;
 
-.red-dot {
-  color: #D82828; 
-}
+          .trending-collection-section__accent-dot {
+            color: var(--accent-color);
+          }
+        }
 
-.trending-collection-section__button {
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px 20px;
-  margin-top: 30px;
-  background-color: #D82828;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+        .trending-collection-section__play-icon {
+          margin: 30px 0;
+          color: var(--title-alternative-color);
+          width: 50px;
+        }
 
-.trending-collection-section__arrow {
-  margin-left: 10px;
-  font-size: 24px;
+        @media (min-width:768px) {
+          .trending-collection-section__title {
+            font-size: 5.8125rem;
+          }
+
+          .trending-collection-section__play-icon {
+            width: 70px;
+          }
+        }
+
+        @media (min-width:1024px) {
+          .trending-collection-section__title {
+            font-size: 7.75rem;
+          }
+
+          .trending-collection-section__play-icon {
+            width: 130px;
+          }
+        }
+      }
+
+      @media (min-width:768px) {
+        .trending-collection-section__slogan {
+          font-size: 1.4375rem;
+        }
+      }
+
+      @media (min-width:1024px) {
+        .trending-collection-section__slogan {
+          font-size: 1.5rem;
+        }
+
+        .trending-collection-section__title-conatiner {
+          flex-direction: row;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+
+      .trending-collection-section__button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1.03125rem;
+        font-weight: 700;
+        text-decoration: none;
+
+        .trending-collection-section__icon {
+          width: 24px;
+        }
+      }
+
+      @media (min-width:1024px) {
+        .trending-collection-section__button {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    @media (min-width:768px) {
+      .trending-collection-section__content-wrapper {
+        width: 55.5%;
+      }
+    }
+  }
+
+  @media (min-width:426px) {
+    .trending-collection-section__container {
+      padding: 160px 32px;
+    }
+  }
+
+  @media (min-width:769px) {
+    .trending-collection-section__container {
+      padding: 205px 40px;
+    }
+  }
 }

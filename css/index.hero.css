@@ -1,6 +1,6 @@
 .hero-section {
     background: url(../img/hero-cta/index.hero-section-bg.jpg);
-    background-position: center;
+    background-position: 65% 50%;
     background-size: cover;
 
     .hero-section__container {
@@ -74,12 +74,16 @@
     }
 
     @media (min-width:426px) {
+        background-position: center;
+
         .hero-section__container {
             padding: 160px 32px;
         }
     }
 
     @media (min-width:769px) {
+        background-position: center;
+
         .hero-section__container {
             padding: 210px 40px;
         }

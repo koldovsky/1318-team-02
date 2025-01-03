@@ -1,29 +1,20 @@
 <main class="store-content">
-    <div class="store__wrapper container">
-      <h1 class="store__title">Store homepage</h1>
-      <h2 class="store__subtitle">Products</h2>
-      <div class="store__content-container"></div>
+  <div class="store__wrapper container">
+    <h1 class="store__title">Store homepage</h1>
+    <h2 class="store__subtitle">Products</h2>
+    <div class="store__content-container"></div>
+  </div>
+  <div class="store__navigation container">
+    <div class="store__pagination">
+      <a class="store__pagination-arrow store__pagination-arrow--prev" href="#">&lt;</a>
+      <div class="store__pagination-pages"></div>
+      <a class="store__pagination-arrow store__pagination-arrow--next" href="#">&gt;</a>
     </div>
-    <div class="store__navigation container">
-      <div class="store__pagination">
-        <a
-          class="store__pagination-arrow store__pagination-arrow--prev store__pagination-arrow--disabled"
-          href="#"
-          >&lt;</a
-        >
-        <button class="store__pagination-page store__pagination-page--current">
-          1
-        </button>
-        <button class="store__pagination-page">2</button>
-        <a class="store__pagination-arrow store__pagination-arrow--next" href="#"
-          >&gt;</a
-        >
-      </div>
-      <div class="store__item-filter">
-        <label class="store__item-filter-label" for="products-per-page"
-          >Products per page:</label
-        >
+    <div class="store__item-filter">
+      <label class="store__item-filter-label" for="products-per-page">Products per page:</label>
+      <div class="store__item-filter-container">
         <select class="store__item-filter-select" id="products-per-page">
+          <option class="store__item-filter-option" value="2">2</option>
           <option class="store__item-filter-option" value="8" selected>8</option>
           <option class="store__item-filter-option" value="12">12</option>
           <option class="store__item-filter-option" value="16">16</option>
@@ -31,5 +22,5 @@
         </select>
       </div>
     </div>
-  </main>
-  
+  </div>
+</main>
