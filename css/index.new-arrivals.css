@@ -1,7 +1,7 @@
 .new-arrivals {
   padding: 50px 40px;
   font-size: 18px;
-}
+ }
 
 @media (min-width: 900px) {
   .new-arrivals {
@@ -96,3 +96,17 @@
 .new-arrivals__product-name a:hover {
   text-decoration: underline;
 }
+
+.arrow-svg_1j4 {
+  transform: rotateY(180deg);
+}
+
+ 
+  @media (min-width: 900px) {
+    .carousel-arrivals__button--prev {
+         align-items: center;
+    }
+  }
+
+
+
