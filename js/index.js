@@ -1,4 +1,5 @@
 function init() {
+  import("./header-burger-menu.js");
   import("./cart.js");
   import("./cart-form-submition.js");
   import("./navs_and_tabs.js");

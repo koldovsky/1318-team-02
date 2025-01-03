@@ -1,4 +1,5 @@
 function init() {
+    import("./header-burger-menu.js");
     import("./products-service.js");
     import("./store-content.js");
 }

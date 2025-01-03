@@ -16,6 +16,7 @@
   --text-color: #717474;
   --button-text-color: #ffffff;
   --accent-color: #f40106;
+  --alternative-accent-color: #d60307;
   --border-cart-color: #22232348;
   --background-form-color: #2223230f;
   --form-background-color: #e4e4e4;
@@ -44,4 +45,8 @@ h3 {
 .container {
   max-width: 1200px;
   margin: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
