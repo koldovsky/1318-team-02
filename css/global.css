@@ -26,6 +26,8 @@
   --form-submit-error-color: #721d17;
   --select-border-color: #c5cbd6;
   --select-box-shadow-color: #2127361f;
+  --color-for-numbers-countdown: #9a9a9a;
+  --color-for-border-countdown: #d6d3d3;
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }

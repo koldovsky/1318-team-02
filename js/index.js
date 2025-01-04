@@ -4,6 +4,7 @@ function init() {
   import("./cart-form-submition.js");
   import("./navs_and_tabs.js");
   import("./new-arrival-carousel.js");
+  import("./countdown.js");
 
 }
 const totalPartials = document.querySelectorAll(

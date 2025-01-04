@@ -1,88 +1,148 @@
-.countdown-section {
-  background-color: #000; /* Чорний фон */
-  color: #fff; /* Білий текст */
-  padding: 50px;
+.countdown {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--title-color);
+  color: var(--title-alternative-color);
+  gap: 40px;
   text-align: left;
-  max-width: 600px;
+  height: 100%;
   margin: 0 auto;
 }
 
-/* Заголовок */
-.deal-title {
-  font-size: 36px;
-  font-weight: bold;
+.countdown__description br {
+  display: none;
+}
+
+.countdown__title br {
+  display: none;
+}
+
+.countdown__deal {
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.countdown__title {
+  font-size: 3.5rem;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
-.red-dot {
-  color: red;
+.countdown__dot {
+  color: var(--accent-color);
 }
 
-/* Підзаголовок */
-.deal-subtitle {
-  font-size: 20px;
+.countdown__subtitle {
+  font-size: 1.03rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.deal-price {
-  color: #ff0000; /* Червоний */
-  font-size: 24px;
+.countdown__price {
+  color: var(--accent-color);
+  font-size: 3rem;
   font-weight: bold;
 }
 
-.deal-old-price {
+.countdown__old-price {
   text-decoration: line-through;
-  color: #888; /* Сірий для старої ціни */
+  font-size: 1.2rem;
 }
 
-/* Опис */
-.deal-description {
-  font-size: 16px;
+.countdown__description {
+  font-size: 1.2rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-/* Лінк */
-.deal-link {
-  font-size: 16px;
+.countdown__link {
+  padding-top: 25px;
+  font-size: 1rem;
   font-weight: bold;
-  color: #fff;
+  color: var(--title-alternative-color);
   text-decoration: none;
-  border-bottom: 2px solid #fff;
   transition: all 0.3s ease;
 }
 
-.deal-link:hover {
-  color: #ff0000;
-  border-bottom: 2px solid #ff0000;
+.countdown__link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
-/* Таймер */
-.countdown-timer {
+.countdown__timer {
   display: flex;
+  flex-flow: row nowrap;
   gap: 20px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
-.timer-item {
+.countdown__timer-item {
   text-align: center;
+  border: 1px solid var(--color-for-border-countdown);
+  padding: 10px 5px;
+  width: 25%;
+  border-radius: 5px;
 }
 
-.time {
-  font-size: 32px;
-  font-weight: bold;
-  color: #ff0000; /* Червоний колір цифр */
+.countdown__label {
+  font-size: 0.9rem;
+  color: var(--color-for-numbers-countdown);
+  font-weight: 500;
 }
 
-.label {
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #fff;
+.countdown__image {
+  width: 100%;
+  height: 380px;
 }
-  
-  .image-section img {
-    width: 100%;
-    height: auto;
+
+.countdown__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (min-width: 800px) {
+  .countdown__title {
+    font-size: 7rem;
   }
+
+  .countdown__deal {
+    margin: auto;
+    padding: 70px 20px;
+  }
+  
+
+  .countdown__description br {
+    display: block;
+  }
+
+  .countdown__title br {
+    display: block;
+  }
+
+  .countdown__link {
+    font-size: 0.9rem;
+  }
+
+  .countdown__image img {
+    max-width: 800px;
+  }
+
+}
+
+@media (min-width: 700px) {
+  .countdown__image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .countdown {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.countdown__time {
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+}
