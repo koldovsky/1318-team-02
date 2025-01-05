@@ -1,5 +1,4 @@
 import { ProductsService } from './products-service.js';
-
 export class ProductList {
   constructor() {
     this.container = document.querySelector('.store__content-container');
@@ -13,7 +12,7 @@ export class ProductList {
     this.renderProducts();
     this.addEventListeners();
   }
-
+  
   async renderProducts() {
     const productsToShow = Number(this.productsFilter.value);
     const start = (this.currentPage - 1) * productsToShow;
@@ -27,6 +26,9 @@ export class ProductList {
       productListHtml += this.createProductHtml(product);
     });
     this.container.innerHTML = productListHtml;
+
+    this.addLinkEventListeners();
+
     this.renderPagination(products);
   }
 
@@ -70,9 +72,9 @@ export class ProductList {
             src="${product.imgSrc}"
             alt="${product.imgAlt}"
           />
-          <h4 class="store__item-title">
-            <a href="#" class="store__item-link">${product.productTitle}</a>
-          </h4>
+          <header class="store__item-title">
+            <a href="store-about-each-item.html" class="store__item-link">${product.productTitle}</a>
+          </header>
           <p class="store__item-price">$${product.productPrice},00</p>
           <button class="store__item-button accent-color-button" data-id="${product.id}">Buy</button>
       </article>`;
@@ -90,6 +92,19 @@ export class ProductList {
     this.nextPage.addEventListener('click', () => {
       if (this.currentPage < this.productsPagination.children.length) this.currentPage++;
       this.renderProducts();
+    });
+  }
+
+  addLinkEventListeners() {
+    const linksForProduct = document.querySelectorAll('a.store__item-link');
+    linksForProduct.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const getProductName = link.innerText.trim();
+        localStorage.setItem('product', getProductName);
+        window.location.href = 'store-about-each-item.html';
+        console.log(localStorage.getItem('product')); 
+      });
     });
   }
 }

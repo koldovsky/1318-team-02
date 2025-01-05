@@ -127,4 +127,5 @@
   background: var(--button-text-color);
   border: none;
   border-radius: 50%;
+  cursor: pointer;
 }

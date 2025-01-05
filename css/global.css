@@ -28,6 +28,7 @@
   --select-box-shadow-color: #2127361f;
   --color-for-numbers-countdown: #9a9a9a;
   --color-for-border-countdown: #d6d3d3;
+  --color-in-stock: #6bb66e;
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }
