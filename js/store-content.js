@@ -1,5 +1,4 @@
 import { ProductsService } from "./products-service.js";
-import { addToCart } from "./cart.js";
 export class ProductList {
   constructor() {
     this.container = document.querySelector(".store__content-container");
