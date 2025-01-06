@@ -76,7 +76,7 @@ async function getProducts(productName) {
   }
 }
 
-export async function addToCart(productName) {
+async function addToCart(productName) {
   const product = await getProducts(productName);
   if (!product) {
     console.error("Product not found");
@@ -218,3 +218,5 @@ export async function addToCart(productName) {
     }
   });
 }
+
+export default addToCart;

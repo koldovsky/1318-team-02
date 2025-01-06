@@ -1,4 +1,5 @@
 import { ProductsService } from "./products-service.js";
+import addToCart from "./cart.js";
 export class ProductList {
   constructor() {
     this.container = document.querySelector(".store__content-container");
@@ -102,7 +103,7 @@ export class ProductList {
             <a href="store-about-each-item.html" class="store__item-link">${product.productTitle}</a>
           </header>
           <p class="store__item-price">$${product.productPrice},00</p>
-          <button class="store__item-button accent-color-button" data-id="${product.id}">Buy</button>
+          <button class="store__item-button accent-color-button sale-card__button-cart--add" data-id="${product.id}">Buy</button>
       </article>`;
   }
 
