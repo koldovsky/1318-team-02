@@ -1,4 +1,4 @@
-const addToCartButton = document.querySelectorAll(
+const addToCartButtons = document.querySelectorAll(
   ".sale-card__button-cart--add"
 );
 const cartContainer = document.querySelector(".cart-container");
@@ -25,13 +25,26 @@ const shoppingCartPromoCodeButton = document.querySelector(
 const cartOverlay = document.querySelector(".cart-overlay");
 let totalSum = 0;
 
-addToCartButton.forEach((button) => {
+addToCartButtons.forEach((button) => {
   button.addEventListener("click", function () {
-    cartIcon.classList.add("active");
-    setTimeout(() => {
-      cartIcon.classList.remove("active");
-    }, 3000);
-    addToCart(this);
+    const closestSaleCart = this.closest(".sale-card");
+    if (closestSaleCart) {
+      const productNameElement = closestSaleCart.querySelector(
+        'a[href="store-about-each-item.html"]'
+      );
+      if (productNameElement) {
+        const productName = productNameElement.textContent.trim();
+        addToCart(productName);
+        cartIcon.classList.add("active");
+        setTimeout(() => {
+          cartIcon.classList.remove("active");
+        }, 3000);
+      } else {
+        console.log("Product link not found!");
+      }
+    } else {
+      console.log("Sale card not found!");
+    }
   });
 });
 
@@ -50,16 +63,33 @@ function truncateProductName(name, maxLength = 18) {
   return name;
 }
 
-function addToCart(button) {
+async function getProducts(productName) {
+  try {
+    const products = await (
+      await fetch("./api/store-products-info.json")
+    ).json();
+    const product = products.find((item) => item.productTitle === productName);
+    return product || null;
+  } catch (error) {
+    console.error("Error fetching or parsing JSON:", error);
+    return null;
+  }
+}
+
+export async function addToCart(productName) {
+  const product = await getProducts(productName);
+  if (!product) {
+    console.error("Product not found");
+    return;
+  }
   cartContainer.classList.add("active-cart");
   cartItemsCount.classList.add("active-cart");
   let currentCount = Number(cartItemsCount.textContent);
   cartItemsCount.textContent = currentCount + 1;
-  const cardElement = button.closest(".sale-card");
-  const productName = cardElement.querySelector("header a").textContent.trim();
-  const truncatedProductName = truncateProductName(productName);
-  const productPrice = cardElement.querySelector("p").textContent.trim();
-  const productImage = cardElement.querySelector("img").src;
+  const productNameCart = product.productTitle;
+  const truncatedProductName = truncateProductName(productNameCart);
+  const productPrice = product.productPrice;
+  const productImage = product.imgSrc;
   const existingProduct = Array.from(
     shoppingCartProducts.querySelectorAll(".product-item__name")
   ).find((item) => item.textContent.trim() === truncatedProductName);
@@ -71,10 +101,10 @@ function addToCart(button) {
     quantityInput.value = Number(quantityInput.value) + 1;
   } else {
     shoppingCartProducts.innerHTML += `<div class="product-item">
-        <img src="${productImage}" alt="${truncatedProductName}" class="product-item__image">
+        <img src="${productImage}" alt="${productNameCart}" class="product-item__image">
         <div class="product-item__details">
           <p class="product-item__name">${truncatedProductName}</p>
-          <p class="product-item__price">${productPrice}</p>
+          <p class="product-item__price">$${productPrice}</p>
           <div class="product-item__quantity">
             <input type="number" min="1" value="1" class="product-item__quantity-input">
           </div>
@@ -119,6 +149,7 @@ function addToCart(button) {
     } else {
       cartContainer.classList.add("active-cart");
       cartItemsCount.classList.add("active-cart");
+      recalculateItemsInCart();
     }
   });
 
@@ -161,6 +192,7 @@ function addToCart(button) {
       Continue shopping to add product to your cart</p>`;
       cartContainer.classList.remove("active-cart");
       cartItemsCount.classList.remove("active-cart");
+      cartIcon.classList.remove("active");
     } else {
       recalculateQuantity();
       recalculateTotal();
@@ -168,19 +200,21 @@ function addToCart(button) {
     }
   }
   recalculateItemsInCart();
+
+  shoppingCartPromoCodeButton.addEventListener("click", () => {
+    shoppingCartPromocodeForm.classList.toggle("active");
+  });
+
+  document.body.addEventListener("click", function (event) {
+    if (
+      !cartModalWindow.contains(event.target) &&
+      !cartContainer.contains(event.target)
+    ) {
+      cartModalWindow.classList.remove("active-cart");
+      document.body.classList.remove("active-cart");
+      cartOverlay.classList.remove("active");
+      cartContainer.classList.add("active-cart");
+      cartItemsCount.classList.add("active-cart");
+    }
+  });
 }
-
-shoppingCartPromoCodeButton.addEventListener("click", () => {
-  shoppingCartPromocodeForm.classList.toggle("active");
-});
-
-document.body.addEventListener("click", function (event) {
-  if (
-    !cartModalWindow.contains(event.target) &&
-    !cartContainer.contains(event.target)
-  ) {
-    cartModalWindow.classList.remove("active-cart");
-    document.body.classList.remove("active-cart");
-    cartOverlay.classList.remove("active");
-  }
-});

@@ -1,8 +1,8 @@
 const cartForm = document.querySelector(".shopping-cart__form");
 const cartFormStatus = document.querySelector(".shopping-cart__form-status");
-
 async function handleCartSubmit(event) {
   event.preventDefault();
+
   try {
     const response = await fetch(cartForm.action, {
       method: cartForm.method,
@@ -32,5 +32,4 @@ async function handleCartSubmit(event) {
     console.error("Error during form submission:", error);
   }
 }
-
 cartForm.addEventListener("submit", handleCartSubmit);

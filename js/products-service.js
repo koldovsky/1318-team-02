@@ -1,19 +1,21 @@
 export class ProductsService {
-    static #instance; 
-    constructor() {
-        if (!ProductsService.#instance) ProductsService.#instance = this;
-        return ProductsService.#instance;
-    }
+  static #instance;
+  constructor() {
+    if (!ProductsService.#instance) ProductsService.#instance = this;
+    return ProductsService.#instance;
+  }
 
-    async getProducts() {
-        if (!this.products) {
-            this.products = await (await fetch('./api/store-products-info.json')).json();
-        }
-        return this.products;
+  async getProducts() {
+    if (!this.products) {
+      this.products = await (
+        await fetch("./api/store-products-info.json")
+      ).json();
     }
+    return this.products;
+  }
 
-    async getProductById(id) {
-        const products = await this.getProducts();
-        return products.find(product => product.id === id);
-    }
+  async getProductById(id) {
+    const products = await this.getProducts();
+    return products.find((product) => product.id === id);
+  }
 }

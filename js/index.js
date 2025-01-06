@@ -6,7 +6,6 @@ function init() {
   import("./new-arrival-carousel.js");
   import("./store-about-each-item.js");
   import("./countdown.js");
-
 }
 const totalPartials = document.querySelectorAll(
   '[hx-trigger="load"], [data-hx-trigger="load"]'
