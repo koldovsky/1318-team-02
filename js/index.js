@@ -2,7 +2,7 @@ function init() {
   import("./header-burger-menu.js");
   import("./cart.js");
   import("./cart-form-submition.js");
-  import("./navs_and_tabs.js");
+  import("./main-collection-navs-and-tabs.js");
   import("./new-arrival-carousel.js");
   import("./store-about-each-item.js");
   import("./countdown.js");
