@@ -24,6 +24,7 @@
   text-align: left;
   line-height: 2.5rem;
   color: var(--title-alternative-color);
+  opacity: 0.6;
 }
 
 .hero__feature-icon {
@@ -74,7 +75,7 @@
   color: var(--title-alternative-color);
   text-decoration: none;
   text-align: center;
-  border:2px solid var(--title-alternative-color);
+  border: 2px solid var(--title-alternative-color);
   transition: all 0.3s ease;
   font-weight: bold;
   transition: transform 0.3s ease;
