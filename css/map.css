@@ -23,13 +23,13 @@
   padding: 60px;
   width: 370px;
   border-radius: 12px;
-  box-shadow:var(--title-transparent-color);
+  box-shadow: var(--title-transparent-color);
   text-align: center;
 }
 .dot {
   color: var(--accent-color);
 }
-.contact-box h1 {
+.contact-box h2 {
   font-size: 52px;
   color: var(--title-color);
   margin-bottom: 10px;
@@ -47,70 +47,6 @@
   color: var(--text-color);
   text-decoration: none;
 }
-
 .contact-box a:hover {
   text-decoration: underline;
-}
-/* Pin styling */
-.pin {
-  position: center;
-  bottom: 80px; /* Distance above the map marker */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #fff; 
-  color: var(--title-color);
-  padding: 15px 20px;
-  border-radius: 8px; 
-  box-shadow: var(--title-color);
-  text-align: center;
-  min-width: 220px; 
-  z-index: 10;
-}
-
-/* Pin title */
-.pin h1 {
-  text-align: left;
-  font-size: 18px;
-  font-weight: bold;
-  color:var(--text-color);
-  margin: 0 0 5px 0;
-}
-
-
-.pin p {
-  text-align: left;
-  font-size: 14px;
-  color: #555;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Close button styling */
-.close-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: none;
-  border: none;
-  font-size: 18px;
-  color: #999;
-  cursor: pointer;
-}
-
-.close-btn:hover {
-  color: #333;
-}
-
-/* Optional: Pointer for the pin */
-.pin::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #fff;
 }
