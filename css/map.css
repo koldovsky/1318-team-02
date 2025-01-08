@@ -29,7 +29,7 @@
 .dot {
   color: var(--accent-color);
 }
-.contact-box h1 {
+.contact-box h2 {
   font-size: 52px;
   color: var(--title-color);
   margin-bottom: 10px;
@@ -47,7 +47,6 @@
   color: var(--text-color);
   text-decoration: none;
 }
-
 .contact-box a:hover {
   text-decoration: underline;
 }
