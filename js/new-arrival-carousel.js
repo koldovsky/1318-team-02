@@ -1,4 +1,4 @@
-import  addToCart  from "./cart.js";
+import addToCart from "./cart.js";
 const slides = [
   '<div class="sale-card"><img class="new-arrivals__product-image" src="img/new-arrivals/asics.jpg" alt="Asics Jordan 2000"><header class="new-arrivals__product-name"><a href="store-about-each-item.html">Asics Jordan 2000</a></header><p class="new-arrivals__product-price">$200.00</p><button class="new-arrivals__add-to-cart sale-card__button-cart--add">Add to cart</button></div>',
   '<div class="sale-card"><img class="new-arrivals__product-image" src="img/new-arrivals/puma.jpg" alt="Puma Textile Running"><header class="new-arrivals__product-name"><a href="store-about-each-item.html">Puma Textile Running Shoes</a></header><p class="new-arrivals__product-price">$62.00</p><button class="new-arrivals__add-to-cart sale-card__button-cart--add">Add to cart</button></div>',

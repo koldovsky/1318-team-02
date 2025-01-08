@@ -30,6 +30,8 @@
   --color-for-numbers-countdown: #9a9a9a;
   --color-for-border-countdown: #d6d3d3;
   --color-in-stock: #6bb66e;
+  --color-for-brand-button_carousel: rgba(0, 0, 0, 0.5);
+  --color-for-brand-decoration_carousel: rgba(0, 0, 0, 0.133);
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }

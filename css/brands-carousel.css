@@ -1,9 +1,13 @@
-/* Основні стилі для каруселі */
 .clients-carousel {
   position: relative;
   max-width: 80%;
-  margin: 0 auto;
+  margin: 90px auto 60px;
   overflow: hidden;
+
+}
+
+.clients-carousel__slide {
+  list-style-type: none;
 }
 
 .clients-carousel__track-container {
@@ -13,35 +17,32 @@
 
 .clients-carousel__track {
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
 }
 
-.clients-carousel__slide {
-  flex: 0 0 auto;
-  width: 200px; /* ширина одного слайду */
-  text-align: center;
-}
-
 .carousel__image {
-  max-width: 100%;
-  height: auto;
+  padding: 40px 60px;
+  width: 250px;
+  height: 160px;
   display: block;
-  border: 2px solid #000;
+  border: 2px solid var(--color-for-brand-decoration_carousel);
 }
 
-/* Стилі для кнопок навігації */
 .clients-carousel__button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: var(--color-for-brand-button_carousel);
+  color: var(--title-alternative-color);
   border: none;
   cursor: pointer;
   padding: 10px;
   z-index: 1;
+  border-radius: 100px;
 }
 
 .clients-carousel__button--left {
@@ -50,10 +51,4 @@
 
 .clients-carousel__button--right {
   right: 10px;
-}
-
-/* Стилі для індикаторів */
-.clients-carousel__nav {
-  text-align: center;
-  margin-top: 10px;
 }
