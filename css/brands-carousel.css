@@ -1,0 +1,59 @@
+/* Основні стилі для каруселі */
+.clients-carousel {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.clients-carousel__track-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.clients-carousel__track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.clients-carousel__slide {
+  flex: 0 0 auto;
+  width: 200px; /* ширина одного слайду */
+  text-align: center;
+}
+
+.carousel__image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid #000;
+}
+
+/* Стилі для кнопок навігації */
+.clients-carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.clients-carousel__button--left {
+  left: 10px;
+}
+
+.clients-carousel__button--right {
+  right: 10px;
+}
+
+/* Стилі для індикаторів */
+.clients-carousel__nav {
+  text-align: center;
+  margin-top: 10px;
+}

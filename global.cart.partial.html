@@ -1,25 +1,13 @@
 <aside class="cart">
+  <div class="cart-overlay"></div>
   <div class="cart-container">
-    <svg
-      class="cart-container__icon"
-      width="40"
-      height="40"
-      viewBox="0 0 24 30"
-      stroke="#000"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      class="svg_2UK ui-cart-icon-color--light_3Gm"
-    >
+    <svg class="cart-container__icon" width="40" height="40" viewBox="0 0 24 30" stroke="#000" fill="none"
+      xmlns="http://www.w3.org/2000/svg" class="svg_2UK ui-cart-icon-color--light_3Gm">
       <path
         d="M1 10C1 8.89543 1.89543 8 3 8H21C22.1046 8 23 8.89543 23 10V25C23 27.2091 21.2091 29 19 29H5C2.79086 29 1 27.2091 1 25V10Z"
-        stroke-width="2"
-      ></path>
-      <path
-        d="M17 12V6C17 3.23858 14.7614 1 12 1V1C9.23858 1 7 3.23858 7 6V12"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      ></path>
+        stroke-width="2"></path>
+      <path d="M17 12V6C17 3.23858 14.7614 1 12 1V1C9.23858 1 7 3.23858 7 6V12" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round"></path>
     </svg>
     <div class="cart__item-count">0</div>
   </div>
@@ -32,85 +20,52 @@
         </button>
       </header>
       <div class="shopping-cart__main-container">
-        <div class="shopping-cart__products"></div>
+        <div class="shopping-cart__products">
+          <div class="shopping-cart__empty-message"></div>
+        </div>
         <div class="shopping-cart__promocode-container">
           <div class="shopping-cart__summary">
             <button class="shopping-cart__promo-code">Promo code</button>
             <div class="shopping-cart__promocode">
-              <input
-                type="text"
-                id="promocode"
-                name="promocode"
-                class="shopping-cart__input-promocode"
-                placeholder="Enter promo code"
-                required
-              />
+              <input type="text" id="promocode" name="promocode" class="shopping-cart__input-promocode"
+                placeholder="Enter promo code" required />
               <button class="shopping-cart__button-promocode">OK</button>
             </div>
           </div>
           <p class="shopping-cart__total">
-            $<span class="shopping-cart__total-value">0</span>
+            $<span class="shopping-cart__total-value">1</span>
           </p>
         </div>
-        <form class="shopping-cart__form" action="#" method="post">
+        <form class="shopping-cart__form" action="https://formspree.io/f/xanyegdw" method="POST">
           <fieldset class="shopping-cart__fieldset">
             <legend class="shopping-cart__form-title">
               <b>Place an order</b>
             </legend>
             <div class="shopping-cart__form-group">
-              <label for="name" class="shopping-cart__label"
-                >Name <span class="shopping-cart__required">*</span></label
-              >
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="shopping-cart__input"
-                placeholder="Your name"
+              <label for="name" class="shopping-cart__label">Name <span class="shopping-cart__required">*</span></label>
+              <input type="text" id="name" name="name" class="shopping-cart__input" placeholder="Your name"
                 pattern="[A-Za-z\s\-']{2,}"
                 title="Please enter a valid name. Only letters, spaces, hyphens, and apostrophes are allowed."
-                required
-              />
+                required />
             </div>
             <div class="shopping-cart__form-group">
-              <label for="email" class="shopping-cart__label"
-                >Email <span class="shopping-cart__required">*</span></label
-              >
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="shopping-cart__input"
-                placeholder="Your email address"
-                pattern="^\S+@\S+\.\S+$"
-                title="Please enter your email like this: example@mail.com"
-                required
-              />
+              <label for="email" class="shopping-cart__label">Email <span
+                  class="shopping-cart__required">*</span></label>
+              <input type="email" id="email" name="email" class="shopping-cart__input" placeholder="Your email address"
+                pattern="^\S+@\S+\.\S+$" title="Please enter your email like this: example@mail.com" required />
             </div>
             <div class="shopping-cart__form-group">
-              <label for="phone" class="shopping-cart__label"
-                >Phone <span class="shopping-cart__required">*</span></label
-              >
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                class="shopping-cart__input"
-                placeholder="Your phone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                title="Phone number must be in the format XXX-XXX-XXXX"
-                required
-              />
+              <label for="phone" class="shopping-cart__label">Phone <span
+                  class="shopping-cart__required">*</span></label>
+              <input type="tel" id="phone" name="phone" class="shopping-cart__input" placeholder="Your phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Phone number must be in the format XXX-XXX-XXXX" required />
             </div>
             <div class="shopping-cart__form-group">
               <label for="comment" class="shopping-cart__label">Comment</label>
-              <textarea
-                id="comment"
-                name="comment"
-                class="shopping-cart__textarea"
-                placeholder="Your comment"
-              ></textarea>
+              <textarea id="comment" name="comment" class="shopping-cart__textarea"
+                placeholder="Your comment"></textarea>
             </div>
+            <div class="shopping-cart__form-status"></div>
             <button type="submit" class="shopping-cart__submit-button">
               Order
             </button>

@@ -119,12 +119,15 @@ main-collection p {
   height: auto;
   transition: all 0.3s ease;
 }
-
-.main-collection__product-name {
-  text-decoration: underline;
+.main-collection__product-name a {
+  color: var(--text-color);
   cursor: pointer;
   font-size: 18px;
   margin: 24px 0 0;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .main-collection__product-price {
@@ -132,11 +135,13 @@ main-collection p {
   font-weight: bold;
   margin: 16px 0 0;
 }
+
 .main-collection__product button:hover {
   background-color: var(--accent-color);
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .main-collection__product button {
   background-color: var(--title-color);
   color: var(--title-alternative-color);

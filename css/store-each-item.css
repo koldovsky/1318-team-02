@@ -1,0 +1,134 @@
+.product {
+    margin: 80px 10px;
+    padding: 25px;
+}
+
+.product__details {
+    padding: 20px;
+}
+
+.product__breadcrumb a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: all 0.4s;
+}
+
+.product__breadcrumb a:hover {
+    text-decoration: underline;
+    color: var(--title-color);
+}
+
+.product__breadcrumb {
+    padding: 40px;
+}
+
+.product-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__description-text {
+    font-size: 1rem;
+    max-width: 400px;
+}
+
+.product__details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 800px) {
+    .product-container {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 70px;
+    }
+}
+
+@media (min-width: 600px) {
+    .product__gallery-main {
+        max-width: 400px;
+    }
+}
+
+.product__status--in-stock {
+    font-size: 1.1rem;
+    color: var(--color-in-stock);
+}
+
+.product__add-to-cart-button {
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.product__add-to-cart-button:hover {
+    background-color: var(--title-color);
+}
+
+.product__quantity {
+    padding: 10px 20px;
+    width: 100px;
+}
+
+.product__add-to-cart {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.product__divider-line-price {
+    margin: 30px 0;
+    border: 0.5px solid var(--button-line-color);
+}
+
+
+.product__divider-line-description {
+    border: 0.5px solid var(--button-line-color);
+}
+
+.product__divider-line-container {
+    position: relative;
+}
+
+.product__divider-line-above {
+    position: absolute;
+    top: 0px;
+    width: 80px;
+    border: 0.5px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.product__price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.product__title {
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.product__description-title {
+    font-size: 0.8rem;
+    padding: 10px 0;
+    width: 20px;
+    color: var(--text-color);
+}
+
+.product__description-text {
+    padding: 10px 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}

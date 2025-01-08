@@ -16,10 +16,20 @@
   --text-color: #717474;
   --button-text-color: #ffffff;
   --accent-color: #f40106;
+  --alternative-accent-color: #d60307;
   --border-cart-color: #22232348;
-  --background-form-color: #2223231f;
+  --dark-transparent-background-color: #222323E3;
+  --background-form-color: #2223230f;
   --form-background-color: #e4e4e4;
   --button-line-color: #e3e3e3;
+  --form-submit-success-color: #104212;
+  --form-submit-warning-color: #583b0e;
+  --form-submit-error-color: #721d17;
+  --select-border-color: #c5cbd6;
+  --select-box-shadow-color: #2127361f;
+  --color-for-numbers-countdown: #9a9a9a;
+  --color-for-border-countdown: #d6d3d3;
+  --color-in-stock: #6bb66e;
   font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }
@@ -39,4 +49,8 @@ h3 {
 .container {
   max-width: 1200px;
   margin: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

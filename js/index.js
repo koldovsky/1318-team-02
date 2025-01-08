@@ -1,6 +1,11 @@
 function init() {
+  import("./header-burger-menu.js");
   import("./cart.js");
-  import("./navs_and_tabs.js");
+  import("./cart-form-submition.js");
+  import("./main-collection-navs-and-tabs.js");
+  import("./new-arrival-carousel.js");
+  import("./store-about-each-item.js");
+  import("./countdown.js");
 }
 const totalPartials = document.querySelectorAll(
   '[hx-trigger="load"], [data-hx-trigger="load"]'

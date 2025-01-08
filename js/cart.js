@@ -1,4 +1,4 @@
-const addToCartButton = document.querySelectorAll(
+const addToCartButtons = document.querySelectorAll(
   ".sale-card__button-cart--add"
 );
 const cartContainer = document.querySelector(".cart-container");
@@ -22,49 +22,77 @@ const shoppingCartPromocodeForm = document.querySelector(
 const shoppingCartPromoCodeButton = document.querySelector(
   ".shopping-cart__promo-code"
 );
-
+const cartOverlay = document.querySelector(".cart-overlay");
 let totalSum = 0;
 
-addToCartButton.forEach((button) => {
+addToCartButtons.forEach((button) => {
   button.addEventListener("click", function () {
-    cartIcon.classList.add("active");
-    setTimeout(() => {
-      cartIcon.classList.remove("active");
-    }, 300);
-    addToCart(this);
+    const closestSaleCart = this.closest(".sale-card");
+    if (closestSaleCart) {
+      const productNameElement = closestSaleCart.querySelector(
+        'a[href="store-about-each-item.html"]'
+      );
+      if (productNameElement) {
+        const productName = productNameElement.textContent.trim();
+        addToCart(productName);
+        cartIcon.classList.add("active");
+        setTimeout(() => {
+          cartIcon.classList.remove("active");
+        }, 3000);
+      } else {
+        console.log("Product link not found!");
+      }
+    } else {
+      console.log("Sale card not found!");
+    }
   });
 });
 
 shopIconButton.addEventListener("click", () => {
   cartModalWindow.classList.add("active-cart");
   document.body.classList.add("active-cart");
-  mainContent.classList.add("active-cart");
   cartContainer.classList.remove("active-cart");
   cartItemsCount.classList.remove("active-cart");
+  cartOverlay.classList.add("active");
 });
 
-closeCartButton.addEventListener("click", () => {
-  cartModalWindow.classList.remove("active-cart");
-  document.body.classList.remove("active-cart");
+function truncateProductName(name, maxLength = 18) {
+  if (name.length > maxLength) {
+    return name.substring(0, maxLength) + "...";
+  }
+  return name;
+}
+
+async function getProducts(productName) {
+  try {
+    const products = await (
+      await fetch("./api/store-products-info.json")
+    ).json();
+    const product = products.find((item) => item.productTitle === productName);
+    return product || null;
+  } catch (error) {
+    console.error("Error fetching or parsing JSON:", error);
+    return null;
+  }
+}
+
+async function addToCart(productName) {
+  const product = await getProducts(productName);
+  if (!product) {
+    console.error("Product not found");
+    return;
+  }
   cartContainer.classList.add("active-cart");
   cartItemsCount.classList.add("active-cart");
-});
-
-function addToCart(button) {
-  cartContainer.classList.add("active-cart");
-  cartItemsCount.classList.add("active-cart");
-
   let currentCount = Number(cartItemsCount.textContent);
   cartItemsCount.textContent = currentCount + 1;
-
-  const cardElement = button.closest(".sale-card");
-  const productName = cardElement.querySelector("header a").textContent.trim();
-  const productPrice = cardElement.querySelector("p").textContent.trim();
-  const productImage = cardElement.querySelector("img").src;
-
+  const productNameCart = product.productTitle;
+  const truncatedProductName = truncateProductName(productNameCart);
+  const productPrice = product.productPrice;
+  const productImage = product.imgSrc;
   const existingProduct = Array.from(
     shoppingCartProducts.querySelectorAll(".product-item__name")
-  ).find((item) => item.textContent.trim() === productName);
+  ).find((item) => item.textContent.trim() === truncatedProductName);
 
   if (existingProduct) {
     const quantityInput = existingProduct
@@ -72,12 +100,11 @@ function addToCart(button) {
       .querySelector(".product-item__quantity-input");
     quantityInput.value = Number(quantityInput.value) + 1;
   } else {
-    shoppingCartProducts.innerHTML += `
-      <div class="product-item">
-        <img src="${productImage}" alt="${productName}" class="product-item__image">
+    shoppingCartProducts.innerHTML += `<div class="product-item">
+        <img src="${productImage}" alt="${productNameCart}" class="product-item__image">
         <div class="product-item__details">
-          <p class="product-item__name">${productName}</p>
-          <p class="product-item__price">${productPrice}</p>
+          <p class="product-item__name">${truncatedProductName}</p>
+          <p class="product-item__price">$${productPrice}</p>
           <div class="product-item__quantity">
             <input type="number" min="1" value="1" class="product-item__quantity-input">
           </div>
@@ -88,17 +115,42 @@ function addToCart(button) {
       ".product-item__delete-button"
     );
     productDeleteButtons.forEach((button) => {
-      button.addEventListener("click", () => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
         const productItem = button.closest(".product-item");
         productItem.remove();
-        recalculateTotal();
         recalculateQuantity();
+        recalculateTotal();
+        recalculateItemsInCart();
       });
     });
   }
-  const inputQuantity = document.querySelector(".product-item__quantity");
-  inputQuantity.addEventListener("input", function () {
-    recalculateTotal();
+
+  const quantityInputs = document.querySelectorAll(
+    ".product-item__quantity-input"
+  );
+  quantityInputs.forEach((input) => {
+    input.addEventListener("input", function () {
+      recalculateQuantity();
+      recalculateTotal();
+      recalculateItemsInCart();
+    });
+  });
+
+  closeCartButton.addEventListener("click", () => {
+    cartModalWindow.classList.remove("active-cart");
+    document.body.classList.remove("active-cart");
+    cartOverlay.classList.remove("active");
+    const currentQuantity = recalculateQuantity();
+    if (currentQuantity === 0) {
+      cartContainer.classList.remove("active-cart");
+      cartItemsCount.classList.remove("active-cart");
+      cartIcon.classList.remove("active");
+    } else {
+      cartContainer.classList.add("active-cart");
+      cartItemsCount.classList.add("active-cart");
+      recalculateItemsInCart();
+    }
   });
 
   function recalculateTotal() {
@@ -114,10 +166,9 @@ function addToCart(button) {
       );
       totalSum += parseFloat(price) * quantity;
     });
-    totalAmount.innerText = `$${totalSum.toFixed(2)}`;
+    totalAmount.innerText = `Total: $${totalSum.toFixed(2)}`;
   }
 
-  recalculateTotal();
   function recalculateQuantity() {
     let totalItems = 0;
     const productItems = document.querySelectorAll(".product-item");
@@ -127,10 +178,45 @@ function addToCart(button) {
       );
       totalItems += quantity;
     });
+
     cartItemsCount.textContent = totalItems;
+    return totalItems;
   }
+
+  const emptyMessage = document.querySelector(".shopping-cart__empty-message");
+
+  function recalculateItemsInCart() {
+    const currentQuantity = recalculateQuantity();
+    if (currentQuantity === 0) {
+      emptyMessage.innerHTML = `<p class="cart-count-items-empty">Shopping cart is empty<br>
+      Continue shopping to add product to your cart</p>`;
+      cartContainer.classList.remove("active-cart");
+      cartItemsCount.classList.remove("active-cart");
+      cartIcon.classList.remove("active");
+    } else {
+      recalculateQuantity();
+      recalculateTotal();
+      emptyMessage.innerHTML = `You have <span class="cart-count-items">${recalculateQuantity()}</span> items in your cart`;
+    }
+  }
+  recalculateItemsInCart();
+
+  shoppingCartPromoCodeButton.addEventListener("click", () => {
+    shoppingCartPromocodeForm.classList.toggle("active");
+  });
+
+  document.body.addEventListener("click", function (event) {
+    if (
+      !cartModalWindow.contains(event.target) &&
+      !cartContainer.contains(event.target)
+    ) {
+      cartModalWindow.classList.remove("active-cart");
+      document.body.classList.remove("active-cart");
+      cartOverlay.classList.remove("active");
+      cartContainer.classList.add("active-cart");
+      cartItemsCount.classList.add("active-cart");
+    }
+  });
 }
 
-shoppingCartPromoCodeButton.addEventListener("click", () => {
-  shoppingCartPromocodeForm.classList.toggle("active");
-});
+export default addToCart;
