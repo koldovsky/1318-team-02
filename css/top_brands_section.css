@@ -3,10 +3,12 @@
     height: 666px;
     padding: 110px 0 120px 0;
     /* background-size: cover; */
+    margin-bottom: 20px;
 }
 
 .hero__content_container {
     height: 100%;
+    max-width: 600px;
     margin: 0 10% 0 45%;
 }
 
@@ -83,4 +85,34 @@
 
 .hero__button:hover:after {
   transform: translateX(5px);
+}
+
+@media (max-width: 1200px) {
+  .hero__content_container{ 
+    margin: 0 10% 0 45%;
+    width: 100%;
+  }
+}  
+
+@media (max-width: 1000px) {
+  .hero__content_container{ 
+    margin: 0 10% 0 35%;
+  }
+}
+
+
+@media (max-width: 740px) {
+  .hero__content_container{ 
+    margin: 0 10% 0 20%;
+  }
+}
+
+
+@media (max-width: 321px) {
+  .hero__content_container{ 
+    margin: -25% 10% 0 2%;
+  }
+  .hero__description {
+    width: 80%;
+  }
 }
