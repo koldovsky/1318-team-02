@@ -4,57 +4,69 @@
     <meta charset="UTF-8" />
     <title>Catalog Page</title>
     <link rel="stylesheet" href="./css/catalogue01.css" />
-    <script src="https://unpkg.com/htmx.org@1.9.10"
-        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <div class="contacts">
-        <div class="content-wrapper">
-          <div class="left">We’ve extended our returns period to 30 days.</div>
-          <div class="right">
-            <a href="mailto:workout@email.com">workout@email.com</a>
-            <a href="tel:+12345678900">+1 (234) 567 89 00</a>
+    <header
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.header.partial.html"
+    ></header>
+    <main>
+    <section class="w-section">
+          <div class="homepage"> Store homepage </div>
+          <div class="container"> 
+            <div class="container-wrapper">
+            <div class="container2">
+              <img class="leftarrow" src="./img/secondary-elements/reshot-icon-arrow-chevron-left-975UQXVKZF.svg" alt="arrow-element1">  
+              <img class="item__img " src="./img/store-img/adidas-cloudfoam-trainers.jpg" alt="item_name">
+              <img class="rightarrow" src="./img/secondary-elements/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg" alt="arrow-element"> 
+            </div>
+            <div class="small-imge">
+              <img class="small-img" src="./img/store-img/adidas-cloudfoam-trainers.jpg" alt="small-image">
+            </div>
+            </div>
+            <div class="text">
+              <h1 class="firstline">In stock</h1>
+              <h2 class="secondline">Adidas Cloudfoam Trainers (1332)</h2>
+              <h3 class="thirdline">Product code 25</h3>
+              <h4 class="fourthline">$60,00</h4>
+              <hr class="solid">
+              <div class="bottom-line">
+                <div class="quantity-wrapper">
+                  <input min="1" type="number" class="quantity-input" value="1">
+                  <button class="accent-color-button"> Add to cart
+                  </button>
+                </div>
+              </div>
+              <div class="outter-wrapper">
+                <div class="product-description">
+                  <div class="subtitle">
+                    <span class="title__active">
+                      DESCRIPTION
+                    </span>
+                  </div>
+                  <div class="description-text"> 
+                    <p>These color block trainers provide breathability, stability, and durability due to Adidas high-tech mesh. Lightweight EVA foam cushioning makes every your step easier.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <nav>
-        <div class="content-wrapper">
-          <a href="#" class="logo">
-            <img src="./img/logo.svg" alt="" />
-          </a>
-          <ul>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Sale</a>
-            </li>
-            <li>
-              <a href="#">Collection</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-          </ul>
-          <ul class="right socials">
-            <li>
-              <a title="Facebook" class="fa-brands fa-facebook" href="#"></a>
-            </li>
-            <li>
-              <a title="Instagram" class="fa-brands fa-instagram" href="#"></a>
-            </li>
-            <li>
-              <a title="Youtube" class="fa-brands fa-youtube" href="#"></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="homepage"></div>
+        </section>
+
     </main>
-    <footer data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></footer>
+    
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
   </body>
 </html>
