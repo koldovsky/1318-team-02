@@ -4,29 +4,37 @@
 @import "controls.css";
 
 .item__img{
-  /* width: unset !important; */
   max-height: 283.64px;
-  /* margin-left:-75px; */
   display: inline-block;
   text-align: center;
   margin: 0px 40px;
   cursor: pointer;
 }
 .homepage{
-  color: red;
-  font-size: 16px;
   padding: 40px;
   margin-top: 60px;
+}
+.homepage .link{
+  color: red;
+  font-size: 16px;
+  text-decoration: none;
+  &:hover{
+    color: black;
+  }
+  &:visited{
+    color: red;
+  }
 }
 .text{
 display: inline-block;
 text-align: left;
-margin-left: 100px;
+flex: 1;
 }
 .container{
  display: flex;
  justify-content: center;
  align-items: top;
+ gap: 100px;
 }
 .firstline{
   font-size: 16px!important;
@@ -96,8 +104,6 @@ margin-left: 100px;
  .leftarrow{
   background-color: rgb (255, 255, 255);
   width: 40px;
-  /* margin-top: 125px; */
-  /* margin-right: 125px!important; */
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -126,17 +132,30 @@ margin-left: 100px;
  .small-img{
   width: 75.71px;
   border: solid 1px #000;
+  cursor: pointer;
  }
  .w-section{
   margin-bottom: 100px;
  }
- .small-img{
-  cursor: pointer;
- }
 .accent-color-button{
   cursor: pointer;
 }
- 
+.product-description{
+  margin-top: 25px;
+}
+.title__active{
+  color: var(--text-color);
+  font-size: 12px;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: red solid 3px;
+  display: inline-block;
+}
+.description-text{
+  margin-top: 20px;
+}
+
+
 
 
 
