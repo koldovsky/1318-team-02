@@ -1,81 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Catalog Page</title>
-  <link rel="stylesheet" href="./css/catalogue01.css" />
-  <script
-    src="https://unpkg.com/htmx.org@1.9.10"
-    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-    crossorigin="anonymous"
-  ></script>
-</head>
-<body>
-
-  <header
-    data-hx-trigger="load"
-    data-hx-swap="outerHTML"
-    data-hx-get="global.header.partial.html"
-  ></header>
-
-  <main>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Catalog Page</title>
+    <link rel="stylesheet" href="./css/catalogue01.css" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="hero">
+      </div>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+    <header
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.header.partial.html"
+    ></header>
+    <main>
     <section class="w-section">
-      <div class="homepage">
-        <a class="link" href="./">Store homepage</a>
-      </div>
-
-      <div class="container">
-        <div class="container-wrapper">
-          <div class="container2">
-            <img class="leftarrow" src="./img/secondary-elements/reshot-icon-arrow-chevron-left-975UQXVKZF.svg" alt="Previous">
-            <img class="item__img" src="./img/store-img/adidas-cloudfoam-trainers.jpg" alt="Adidas Cloudfoam Trainers">
-            <img class="rightarrow" src="./img/secondary-elements/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg" alt="Next">
+          <div class="homepage"> 
+            <a class="link" href="./">Store homepage</a> 
           </div>
-
-          <div class="small-imge">
-            <img class="small-img" src="./img/store-img/adidas-cloudfoam-trainers.jpg" alt="Adidas Cloudfoam Trainers - Small">
-          </div>
-        </div>
-
-        <div class="text">
-          <h1 class="firstline">In stock</h1>
-          <h2 class="secondline">Adidas Cloudfoam Trainers (1332)</h2>
-          <h3 class="thirdline">Product code 25</h3>
-          <h4 class="fourthline">$60.00</h4>
-          <hr class="solid" />
-
-          <div class="bottom-line">
-            <div class="quantity-wrapper">
-              <input min="1" type="number" class="quantity-input" value="1" />
-              <button class="accent-color-button add-to-cart-btn">Add to cart</button>
+          <div class="container"> 
+            <div class="container-wrapper">
+            <div class="container2">
+              <img class="leftarrow" src="./img/secondary-elements/reshot-icon-arrow-chevron-left-975UQXVKZF.svg" alt="arrow-element1">  
+              <img class="item__img " src="./img/store-img/adidas-cloudfoam-trainers.jpg" alt="item_name">
+              <img class="rightarrow" src="./img/secondary-elements/reshot-icon-arrow-chevron-right-WDGHUKQ634.svg" alt="arrow-element"> 
             </div>
-          </div>
-
-          <div class="outter-wrapper">
-            <div class="product-description">
-              <div class="subtitle">
-                <span class="title__active">DESCRIPTION</span>
+            <div class="small-imge">
+              <img class="small-img" src="./img/store-img/adidas-cloudfoam-trainers.jpg" alt="small-image">
+            </div>
+            </div>
+            <div class="text">
+              <h1 class="firstline">In stock</h1>
+              <h2 class="secondline">Adidas Cloudfoam Trainers (1332)</h2>
+              <h3 class="thirdline">Product code 25</h3>
+              <h4 class="fourthline">$60,00</h4>
+              <hr class="solid">
+              <div class="bottom-line">
+                <div class="quantity-wrapper">
+                  <input min="1" type="number" class="quantity-input" value="1">
+                  <button class="accent-color-button"> Add to cart
+                  </button>
+                </div>
               </div>
-              <div class="description-text">
-                <p>
-                  These color block trainers provide breathability, stability,
-                  and durability due to Adidas high-tech mesh. Lightweight EVA
-                  foam cushioning makes every your step easier.
-                </p>
+              <div class="outter-wrapper">
+                <div class="product-description">
+                  <div class="subtitle">
+                    <span class="title__active">
+                      DESCRIPTION
+                    </span>
+                  </div>
+                  <div class="description-text"> 
+                    <p>These color block trainers provide breathability, stability, and durability due to Adidas high-tech mesh. Lightweight EVA foam cushioning makes every your step easier.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+        </section>
 
-  <footer
-    data-hx-trigger="load"
-    data-hx-swap="outerHTML"
-    data-hx-get="global.footer.partial.html"
-  ></footer>
-
-  <script type="module" src="./js/index.js"></script>
-</body>
-</html>
+    </main>
+    
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
+  </body>
+</html>  
